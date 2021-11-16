@@ -1,11 +1,11 @@
 class RegistrationsController < ApplicationController
 
   def index
-   @registrations = Registration.all
+    @registrations = Registration.all
   end
 
   def edit
-   @registration = Registration.find(params[:id])
+    @registration = Registration.find(params[:id])
   end
 
   def update
@@ -27,7 +27,8 @@ class RegistrationsController < ApplicationController
   end
 
   private
+
   def registration_params
-   params.require(:registration).permit(:car_make, :car_model, :chassis_number, :engine_number, :engine_capacity)
+    params.require(:registration).permit(:car_make, :car_model, :chassis_number, :engine_number, :engine_capacity, :numeric_plate, :payment_done?)
   end
 end
