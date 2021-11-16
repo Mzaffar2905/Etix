@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2021_11_16_074638) do
     t.string "phone_number"
     t.string "nic_number"
     t.string "license_number"
-    t.boolean "is_analyst"
+    t.boolean "is_analyst", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
