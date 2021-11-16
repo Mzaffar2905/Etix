@@ -9,4 +9,7 @@ class PagesController < ApplicationController
 
   def declaration_successfull
   end
+
+  def fine_successfull
+  end
 end
