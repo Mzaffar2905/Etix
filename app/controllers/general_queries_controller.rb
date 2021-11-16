@@ -1,0 +1,2 @@
+class GeneralQueriesController < ApplicationController
+end
