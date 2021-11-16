@@ -17,6 +17,10 @@ class DeclarationsController < ApplicationController
     @declaration = Declaration.new
   end
 
+  def show
+    @declaration = Declaration.find(params[:id])
+  end
+
   def create
     @declaration = Declaration.new(declaration_params)
     if @declaration.save
