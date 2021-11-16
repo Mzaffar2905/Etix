@@ -6,4 +6,7 @@ class PagesController < ApplicationController
 
   def registration_successfull
   end
+
+  def declaration_successfull
+  end
 end
