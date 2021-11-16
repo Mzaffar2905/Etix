@@ -13,8 +13,12 @@ class RegistrationsController < ApplicationController
     @registration.update(registration_params)
   end
 
+  def show
+    @registration= Registration.find(params[:id])
+  end
+
   def new
-    @restaurant = Restaurant.new
+    @registration = Registration.new
   end
 
   def create
