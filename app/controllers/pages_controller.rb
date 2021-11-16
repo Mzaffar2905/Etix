@@ -12,4 +12,7 @@ class PagesController < ApplicationController
 
   def fine_successfull
   end
+
+  def generalquerie_successfull
+  end
 end
