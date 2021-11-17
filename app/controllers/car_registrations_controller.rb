@@ -26,7 +26,7 @@ class CarRegistrationsController < ApplicationController
     @car_registration = CarRegistration.new(car_registration_params)
     @car_registration.user = current_user
     if @car_registration.save
-      redirect_to car_registration_path(@car_registration)
+      redirect_to registration_successfull_path(@car_registration)
     else
       render :new
     end
