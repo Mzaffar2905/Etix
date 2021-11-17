@@ -1,47 +1,13 @@
+  <h2>Welcome <%= @current_user.first_name %></h2>
+  <h5>NIC Number: <%= @current_user.nic_number %></h5>
 
-  <div class="wrapper">
-    <div class="title">
-       Create a new registration
-    </div>
-      <div class="form">
-        <div class="input_field"></div>
-          <label>First Name</label>
-          <input type="text" class="input">
-        </div>
-        <div class="input_field"></div>
-          <label>Last Name</label>
-          <input type="text" class="input">
-        </div>
-        <div class="input_field"></div>
-          <label>ID Number</label>
-          <input type="text" class="input">
-        </div>
-        <div class="input_field"></div>
-          <label>Phone Number</label>
-          <input type="text" class="input">
-        </div>
-        <div class="input_field"></div>
-          <label>Email Address</label>
-          <input type="text" class="input">
-        </div>
-        <div class="input_field"></div>
-          <label>Car Make</label>
-          <input type="text" class="input">
-        </div>
-        <div class="input_field"></div>
-          <label>Car Model</label>
-          <input type="text" class="input">
-        </div>
-        <div class="input_field"></div>
-          <label>Chassis Number</label>
-          <input type="text" class="input">
-        </div>
-        <div class="input_field"></div>
-          <label>Engine Number</label>
-          <input type="text" class="input">
-        </div>
-        <div class="input_field"></div>
-          <label>Engine Capacity</label>
-          <input type="text" class="input">
-        </div>
-  </div>
+  <%= simple_form_for(@car_registration) do |f| %>
+    <%= f.input :car_make, input_html: { class: "input" } %>
+    <%= f.input :car_model, input_html: { class: "input" } %>
+    <%= f.input :chassis_number, input_html: { class: "input" } %>
+    <%= f.input :engine_number, input_html: { class: "input" } %>
+    <%= f.input :engine_capacity, input_html: { class: "input" } %>
+    <%= f.input :numeric_plate, input_html: { class: "input" } %>
+    <%= f.input :payment_done, input_html: { class: "input" } %>
+    <%= f.submit %>
+  <% end %>
