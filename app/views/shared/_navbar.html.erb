@@ -22,7 +22,9 @@
           <%= image_tag "https://cdn-icons-png.flaticon.com/512/3237/3237476.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Action", "#", class: "dropdown-item" %>
+            <%if current_user.is_analyst? %>
             <%= link_to "My Dashboard", "#", class: "dropdown-item" %>
+            <%end%>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
