@@ -1,13 +1,15 @@
-  <h2>Welcome <%= @current_user.first_name %></h2>
-  <h5>NIC Number: <%= @current_user.nic_number %></h5>
-
-  <%= simple_form_for(@car_registration) do |f| %>
-    <%= f.input :car_make, input_html: { class: "input" } %>
-    <%= f.input :car_model, input_html: { class: "input" } %>
-    <%= f.input :chassis_number, input_html: { class: "input" } %>
-    <%= f.input :engine_number, input_html: { class: "input" } %>
-    <%= f.input :engine_capacity, input_html: { class: "input" } %>
-    <%= f.input :numeric_plate, input_html: { class: "input" } %>
-    <%= f.input :payment_done, input_html: { class: "input" } %>
-    <%= f.submit %>
-  <% end %>
+<div class="container" >
+  
+    <h2>Welcome <%= @current_user.first_name %></h2>
+    <h5>NIC Number: <%= @current_user.nic_number %></h5>
+    <%= simple_form_for(@car_registration) do |f| %>
+      <%= f.input :car_make, input_html: { class: "input" } %>
+      <%= f.input :car_model, input_html: { class: "input" } %>
+      <%= f.input :chassis_number, input_html: { class: "input" } %>
+      <%= f.input :engine_number, input_html: { class: "input" } %>
+      <%= f.input :engine_capacity, input_html: { class: "input" } %>
+      <%= f.input :numeric_plate, input_html: { class: "input" } %>
+      <%= f.input :payment_done, input_html: { class: "input" } %>
+      <%= f.submit %>
+    <% end %>
+</div>

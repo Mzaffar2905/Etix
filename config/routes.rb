@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
     get 'fine_successfull', to: 'pages#fine_sucessfull'
   resources :fines
-
+  get 'legistlation', to: 'pages#legistlation'
   get 'dashboards/:user_id', to: 'dashboards#show', as: 'dashboard_analyst'
   get 'dashboards/:user_id', to: 'dashboards#index', as: 'dashboard_user'
 

@@ -15,4 +15,7 @@ class PagesController < ApplicationController
 
   def generalquerie_successfull
   end
+
+  def legistlation
+  end
 end
