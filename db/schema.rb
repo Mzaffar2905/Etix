@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_17_063913) do
+ActiveRecord::Schema.define(version: 2021_11_17_122715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,13 +32,13 @@ ActiveRecord::Schema.define(version: 2021_11_17_063913) do
   create_table "declarations", force: :cascade do |t|
     t.integer "cof_number"
     t.integer "policy_insurance_number"
-    t.bigint "registration_id", null: false
+    t.bigint "car_registration_id", null: false
     t.boolean "declaration_approved"
     t.boolean "payment_done"
     t.date "expiry_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["registration_id"], name: "index_declarations_on_registration_id"
+    t.index ["car_registration_id"], name: "index_declarations_on_car_registration_id"
   end
 
   create_table "fines", force: :cascade do |t|
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 2021_11_17_063913) do
   end
 
   add_foreign_key "car_registrations", "users"
-  add_foreign_key "declarations", "car_registrations", column: "registration_id"
+  add_foreign_key "declarations", "car_registrations"
   add_foreign_key "fines", "declarations"
   add_foreign_key "general_queries", "users"
 end
