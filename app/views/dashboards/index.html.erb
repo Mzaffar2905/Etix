@@ -1,0 +1,54 @@
+<p>Be more swift , submit your form!</p>
+<div class="cards">
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+        <div>
+          <h2>Registration form</h2>
+          <div class="button">
+            <%= link_to "Registration form", new_car_registration_path, class:"btn btn-primary btn-sm btn-blue" %>
+          </div>
+        </div>
+    </div>
+  </div>
+
+    <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+            <div>
+            <h2>Declarations</h2>
+            <div class="button">
+                <%= link_to "declaration form",new_car_registration_declaration_path(current_user.car_registrations) , class:"btn btn-primary btn-sm btn-blue" %>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+        <div>
+          <h2>fines form</h2>
+          <div class="button">
+            <%= link_to "Fine form", new_fine_path, class:"btn btn-primary btn-sm btn-blue" %>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+        <div>
+          <h2>Queries form</h2>
+          <div class="button">
+            <%= link_to "Queries form", new_general_query_path, class:"btn btn-primary btn-sm btn-blue" %>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+

@@ -23,6 +23,7 @@ class CarRegistrationsController < ApplicationController
 
   def create
     @car_registration = CarRegistration.new(car_registration_params)
+    @car_registration.user = current_user
     if @car_registration.save
       redirect_to registration_successfull_path
     else

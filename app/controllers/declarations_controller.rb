@@ -14,7 +14,10 @@ class DeclarationsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @declaration = Declaration.new
+    @car_registration = CarRegistration.find_by(user_id: @user)
+    @declaration.car_registration = @car_registration
   end
 
   def show
