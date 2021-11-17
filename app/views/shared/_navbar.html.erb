@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
   <% end %>
 
@@ -16,7 +16,10 @@
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Legislation", "#", class: "nav-link" %>
+          <%= link_to "Legistlation", legistlation_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact us", "https://www.linkedin.com/in/beekun-mozaffar-82b3ab1a3/", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://cdn-icons-png.flaticon.com/512/3237/3237476.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -25,7 +28,7 @@
             <%if current_user.is_analyst? %>
             <%= link_to "My Dashboard", dashboard_analyst_path(current_user) , class: "dropdown-item" %>
             <%else%> 
-            <%= link_to "User Dashboard", dashboard_user_path(current_user) , class: "dropdown-item" %>
+            <%= link_to "Forms", dashboard_user_path(current_user) , class: "dropdown-item" %>
             <%end%>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
