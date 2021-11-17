@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'registration_successfull', to: 'pages#registration_sucessfull'
-  resources :registrations
+  resources :car_registrations
   get 'declaration_successfull', to: 'pages#declaration_sucessfull'
   resources :declarations
 
