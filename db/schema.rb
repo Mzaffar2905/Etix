@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_16_074638) do
+ActiveRecord::Schema.define(version: 2021_11_17_063913) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "car_registrations", force: :cascade do |t|
+    t.string "car_make"
+    t.string "car_model"
+    t.string "chassis_number"
+    t.string "engine_number"
+    t.string "engine_capacity"
+    t.bigint "user_id", null: false
+    t.string "numeric_plate"
+    t.boolean "payment_done"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_car_registrations_on_user_id"
+  end
 
   create_table "declarations", force: :cascade do |t|
     t.integer "cof_number"
@@ -44,20 +58,6 @@ ActiveRecord::Schema.define(version: 2021_11_16_074638) do
     t.index ["user_id"], name: "index_general_queries_on_user_id"
   end
 
-  create_table "registrations", force: :cascade do |t|
-    t.string "car_make"
-    t.string "car_model"
-    t.string "chassis_number"
-    t.string "engine_number"
-    t.string "engine_capacity"
-    t.bigint "user_id", null: false
-    t.string "numeric_plate"
-    t.boolean "payment_done"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_registrations_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -76,8 +76,8 @@ ActiveRecord::Schema.define(version: 2021_11_16_074638) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "declarations", "registrations"
+  add_foreign_key "car_registrations", "users"
+  add_foreign_key "declarations", "car_registrations", column: "registration_id"
   add_foreign_key "fines", "declarations"
   add_foreign_key "general_queries", "users"
-  add_foreign_key "registrations", "users"
 end
