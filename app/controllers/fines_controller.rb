@@ -33,8 +33,8 @@ class FinesController < ApplicationController
       redirect_to fine_successful_path
     else
       render :new
+    end
   end
-end
 
 private
 

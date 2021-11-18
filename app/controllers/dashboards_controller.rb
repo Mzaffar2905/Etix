@@ -6,7 +6,7 @@ class DashboardsController < ApplicationController
     @declarations = Declaration.where.not declaration_approved: true
     @declarations_approved = Declaration.where.not payment_done: true
     @car_registrations = CarRegistration.where.not payment_done: true
-    @general_queries = GeneralQuery.all
+    @general_questions = GeneralQuestion.all
     else render :index
     end
   end
