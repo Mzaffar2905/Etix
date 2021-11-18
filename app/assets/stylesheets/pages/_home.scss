@@ -38,7 +38,9 @@
   .banner {
     background-size: cover;
     background-position: center;
-    padding: 250px;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
     
   }
   
@@ -57,3 +59,6 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
   
+  .vilor{
+    margin-left: 20vw;
+  }
