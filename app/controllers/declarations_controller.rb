@@ -24,8 +24,15 @@ class DeclarationsController < ApplicationController
     @declaration = Declaration.find(params[:id])
   end
 
+  def set_random_number
+    random_number = rand(10000..99999)
+  end
+
+
   def create
     @declaration = Declaration.new(declaration_params)
+    @request_number = set_random_number
+    @declaration.request_number = @request_number
     if @declaration.save
       redirect_to declaration_successful_path
     else
@@ -36,6 +43,6 @@ class DeclarationsController < ApplicationController
   private
 
   def declaration_params
-    params.require(:declaration).permit(:cof_number, :policy_insurance_number, :expiry_date, :declaration_approved, :payment_done?)
+    params.require(:declaration).permit(:cof_number, :car_registration, :car_registration_id, :policy_insurance_number, :expiry_date, :declaration_approved, :payment_done?)
   end
 end

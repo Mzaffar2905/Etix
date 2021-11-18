@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_18_073857) do
+ActiveRecord::Schema.define(version: 2021_11_18_112900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,16 +39,18 @@ ActiveRecord::Schema.define(version: 2021_11_18_073857) do
     t.date "expiry_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "request_number"
     t.index ["car_registration_id"], name: "index_declarations_on_car_registration_id"
   end
 
   create_table "fines", force: :cascade do |t|
     t.integer "fineticket"
-    t.bigint "declaration_id", null: false
     t.boolean "payment_done"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["declaration_id"], name: "index_fines_on_declaration_id"
+    t.integer "registration_number"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_fines_on_user_id"
   end
 
   create_table "general_queries", force: :cascade do |t|
@@ -79,6 +81,6 @@ ActiveRecord::Schema.define(version: 2021_11_18_073857) do
 
   add_foreign_key "car_registrations", "users"
   add_foreign_key "declarations", "car_registrations"
-  add_foreign_key "fines", "declarations"
+  add_foreign_key "fines", "users"
   add_foreign_key "general_queries", "users"
 end

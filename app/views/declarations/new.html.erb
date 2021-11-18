@@ -1,0 +1,11 @@
+<div class="container" >
+    <h2>Welcome <%= current_user.first_name %></h2>
+    <h5>NIC Number: <%= current_user.nic_number %></h5>
+
+    <%= simple_form_for(@declaration) do |f| %>
+      <%= f.input :cof_number, input_html: { class: "input" } %>
+      <%= f.input :policy_insurance_number, input_html: { class: "input" } %>
+      <%= f.collection_select :car_registration_id, CarRegistration.all, :id, :car_make %>
+      <%= f.submit %>
+    <% end %>
+</div>
