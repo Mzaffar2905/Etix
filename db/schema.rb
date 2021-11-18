@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_17_122715) do
+ActiveRecord::Schema.define(version: 2021_11_18_073857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_11_17_122715) do
     t.boolean "payment_done"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "request_number"
     t.index ["user_id"], name: "index_car_registrations_on_user_id"
   end
 

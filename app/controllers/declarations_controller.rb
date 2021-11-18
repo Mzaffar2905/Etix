@@ -27,7 +27,7 @@ class DeclarationsController < ApplicationController
   def create
     @declaration = Declaration.new(declaration_params)
     if @declaration.save
-      redirect_to declaration_successfull_path
+      redirect_to declaration_successful_path
     else
       render :new
     end
