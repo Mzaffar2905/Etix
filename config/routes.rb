@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :car_registrations
   get 'declaration_successful', to: 'pages#declaration_successful'
   resources :declarations
-  get 'generalquerie_successful', to: 'pages#generalquerie_successful'
-  resources :general_queries
+  get 'generalquery_successful', to: 'pages#generalquery_successful'
+
+  resources :general_questions
 
     get 'fine_successful', to: 'pages#fine_successful'
   resources :fines

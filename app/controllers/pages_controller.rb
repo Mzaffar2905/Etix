@@ -18,7 +18,8 @@ class PagesController < ApplicationController
     @fine = Fine.where(user: current_user).last
   end
 
-  def generalquerie_successful
+  def generalquery_successful
+    @general_question = GeneralQuestion.where(user: current_user).last
   end
 
   def legislation
