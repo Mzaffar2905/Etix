@@ -15,6 +15,7 @@ class PagesController < ApplicationController
   end
 
   def fine_successful
+    @fine = Fine.where(user: current_user).last
   end
 
   def generalquerie_successful
