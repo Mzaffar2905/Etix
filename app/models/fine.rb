@@ -1,3 +1,3 @@
 class Fine < ApplicationRecord
-  belongs_to :declaration
+  belongs_to :user
 end

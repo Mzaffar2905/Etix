@@ -3,9 +3,8 @@
     <h5>NIC Number: <%= current_user.nic_number %></h5>
 
     <%= simple_form_for(@fine) do |f| %>
-      <%= f.input :fine_ticket, input_html: { class: "input" } %>
-      <%= f.input :policy_insurance_number, input_html: { class: "input" } %>
-      <%= f.collection_select :car_registration_id, CarRegistration.all, :id, :car_make %>
+      <%= f.input :fineticket, input_html: { class: "input" } %>
+      <%= f.input :registration_number, input_html: { class: "input" } %>
       <%= f.submit %>
     <% end %>
 </div>
