@@ -1,1 +1,11 @@
-<h1>Create new fines</h1>
+<div class="container" >
+    <h2>Welcome <%= current_user.first_name %></h2>
+    <h5>NIC Number: <%= current_user.nic_number %></h5>
+
+    <%= simple_form_for(@fine) do |f| %>
+      <%= f.input :fine_ticket, input_html: { class: "input" } %>
+      <%= f.input :policy_insurance_number, input_html: { class: "input" } %>
+      <%= f.collection_select :car_registration_id, CarRegistration.all, :id, :car_make %>
+      <%= f.submit %>
+    <% end %>
+</div>
