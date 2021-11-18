@@ -1,9 +1,8 @@
 .cards {
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 
