@@ -39,6 +39,6 @@ end
 private
 
   def fine_params
-    params.require(:fine).permit(:fineticket, :payment_done?)
+    params.require(:fine).permit(:fineticket, :registration_number, :payment_done?)
   end
 end
