@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_18_130108) do
+
+ActiveRecord::Schema.define(version: 2021_11_18_140825) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,12 +56,13 @@ ActiveRecord::Schema.define(version: 2021_11_18_130108) do
     t.index ["user_id"], name: "index_fines_on_user_id"
   end
 
-  create_table "general_queries", force: :cascade do |t|
+  create_table "general_questions", force: :cascade do |t|
     t.string "issue"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_general_queries_on_user_id"
+    t.integer "request_number"
+    t.index ["user_id"], name: "index_general_questions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -83,5 +86,5 @@ ActiveRecord::Schema.define(version: 2021_11_18_130108) do
   add_foreign_key "car_registrations", "users"
   add_foreign_key "declarations", "car_registrations"
   add_foreign_key "fines", "users"
-  add_foreign_key "general_queries", "users"
+  add_foreign_key "general_questions", "users"
 end

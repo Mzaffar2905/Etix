@@ -1,0 +1,9 @@
+<div class="container" >
+    <h2>Welcome <%= current_user.first_name %></h2>
+    <h5>NIC Number: <%= current_user.nic_number %></h5>
+
+    <%= simple_form_for(@general_question) do |f| %>
+      <%= f.input :issue, input_html: { class: "input" } %>
+      <%= f.submit %>
+    <% end %>
+</div>
