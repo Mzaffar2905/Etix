@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  get 'registration_successfull', to: 'pages#registration_successfull'
+  get 'registration_successful', to: 'pages#registration_successful'
   resources :car_registrations do
-    get 'declaration_successfull', to: 'pages#declaration_sucessfull'
+    get 'declaration_successful', to: 'pages#declaration_sucessful'
     resources :declarations
   end
-  get 'generalquerie_successfull', to: 'pages#generalquerie_sucessfull'
+  get 'generalquerie_successful', to: 'pages#generalquerie_sucessful'
   resources :general_queries
 
-    get 'fine_successfull', to: 'pages#fine_sucessfull'
+    get 'fine_successful', to: 'pages#fine_sucessful'
   resources :fines
-  get 'legistlation', to: 'pages#legistlation'
+  get 'legislation', to: 'pages#legislation'
   get 'dashboards/:user_id', to: 'dashboards#show', as: 'dashboard_analyst'
   get 'dashboards/:user_id', to: 'dashboards#index', as: 'dashboard_user'
 

@@ -24,7 +24,7 @@ class GeneralQueriesController < ApplicationController
   def create
     @general_querie = GeneralQuery.new(generalquery_params)
     if @general_querie.save
-      redirect_to generalquerie_successfull_path
+      redirect_to generalquerie_successful_path
     else
       render :new
     end

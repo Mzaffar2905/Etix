@@ -13,6 +13,11 @@ class CarRegistrationsController < ApplicationController
     @car_registration.update(car_registration_params)
   end
 
+ def set_random_number
+  random_number = rand(10000..99999)
+ end
+
+
   def show
     @car_registration = CarRegistration.find(params[:id])
   end
@@ -25,8 +30,10 @@ class CarRegistrationsController < ApplicationController
   def create
     @car_registration = CarRegistration.new(car_registration_params)
     @car_registration.user = current_user
+    @request_number = set_random_number
+    @car_registration.request_number = @request_number
     if @car_registration.save
-      redirect_to registration_successfull_path(@car_registration)
+      redirect_to registration_successful_path(@car_registration)
     else
       render :new
     end

@@ -4,18 +4,19 @@ class PagesController < ApplicationController
   def home
   end
 
-  def registration_successfull
+  def registration_successful
+    @car_registration = CarRegistration.where(user: current_user).last
   end
 
-  def declaration_successfull
+  def declaration_successful
   end
 
-  def fine_successfull
+  def fine_successful
   end
 
-  def generalquerie_successfull
+  def generalquerie_successful
   end
 
-  def legistlation
+  def legislation
   end
 end

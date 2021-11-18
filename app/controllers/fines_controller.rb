@@ -23,7 +23,7 @@ class FinesController < ApplicationController
   def create
      @fine = Fine.new(fine_params)
     if @fine.save
-      redirect_to fine_successfull_path
+      redirect_to fine_successful_path
     else
       render :new
   end
