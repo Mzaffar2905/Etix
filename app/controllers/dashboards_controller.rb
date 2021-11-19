@@ -2,10 +2,14 @@ class DashboardsController < ApplicationController
   def show
     @user = current_user
     if @user.is_analyst?
-    @fines = Fine.where.not payment_done: true
-    @declarations = Declaration.where.not declaration_approved: true
-    @declarations_approved = Declaration.where.not payment_done: true
-    @car_registrations = CarRegistration.where.not payment_done: true
+    # @fines = Fine.where.not payment_done: true
+    # @declarations = Declaration.where.not declaration_approved: true
+    # @declarations_approved = Declaration.where.not payment_done: true
+    # @car_registrations = CarRegistration.where.not payment_done: true
+    # @general_questions = GeneralQuestion.all
+    @fines = Fine.all
+    @declarations = Declaration.all
+    @car_registrations = CarRegistration.all
     @general_questions = GeneralQuestion.all
     else render :index
     end

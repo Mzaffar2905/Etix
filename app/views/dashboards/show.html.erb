@@ -1,12 +1,24 @@
 
-<h1>Forms approval pending</h1>
+<h1>Forms FINES pending</h1>
+    <% @fines.each do |fine| %>
+    <%= fine.fineticket%>
+    <%= fine.registration_number %>
+    <% end %>
+<h1>Declaration form</h1>
     <% @declarations.each do |declaration| %>
     <%= declaration.policy_insurance_number %>
-    <%= declaration.policy_insurance_number %>
+    <% end %> 
+<h1>CarRegistration <form action=""></form></h1>
+    <% @car_registrations.each do |carregistration| %>
+    <%= carregistration.car_make %>
+    <%= carregistration.car_model %>
+    <%= carregistration.chassis_number %>
+    <%= carregistration.engine_number %>
+    <%= carregistration.engine_capacity %>
+    <%= carregistration.numeric_plate %>
+    <% end %> 
+<h1>General form</h1>
+    <%  @general_questions.each do |generalquestion| %>
+    <%= generalquestion.issue%>
     <% end %>
-<h1>Declaration payment pending</h1>
-    <% @declarations_approved.each do |declaration| %>
-    <%= declaration.policy_insurance_number %>
-    <% end %>
-
 
