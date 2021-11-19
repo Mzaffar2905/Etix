@@ -4,7 +4,7 @@
       <div class="card-trip">
         <img src="http://resources.finalsite.net/images/v1617464151/myfisdcom/tahb4jmdr4wx9i2wht0j/Registration.jpg" />
         <div class="card-trip-infos">
-            <div>
+            <div class="m-auto">
               <h2>Registration form</h2>
               <div class="button">
                 <%= link_to "Registration form", new_car_registration_path, class:"btn btn-primary btn-sm btn-blue" %>
@@ -16,7 +16,7 @@
         <div class="card-trip">
             <img src="https://us.123rf.com/450wm/tashatuvango/tashatuvango1610/tashatuvango161001646/64254511-declaration-card-file-on-background-of-modern-laptop-keyboard-archive-concept-closeup-view-selective.jpg?ver=6" />
             <div class="card-trip-infos">
-                <div>
+                <div class="m-auto">
                 <h2>Declarations</h2>
                 <div class="button">
                     <%= link_to "declaration form",new_declaration_path(current_user.car_registrations) , class:"btn btn-primary btn-sm btn-blue" %>
@@ -30,8 +30,9 @@
       <div class="card-trip">
         <img src="https://www.porthope.ca/en/business-and-development/resources/Paying%20a%20Parking%20Ticket/TopBanner_908x420_PayTicket.jpg" />
         <div class="card-trip-infos">
-            <div>
+            <div class="m-auto">
               <h2>Fines form</h2>
+            <div>
               <div class="button">
                 <%= link_to "Fine form", new_fine_path, class:"btn btn-primary btn-sm btn-blue" %>
               </div>
@@ -42,8 +43,9 @@
       <div class="card-trip">
         <img src="https://janefriedman.com/wp-content/uploads/2014/04/query-letter.jpg" />
         <div class="card-trip-infos">
-            <div>
+            <div class="m-auto">
               <h2>General Inquiries</h2>
+            <div>
               <div class="button">
                 <%= link_to "General Inquiries", new_general_question_path, class:"btn btn-primary btn-sm btn-blue" %>
               </div>
