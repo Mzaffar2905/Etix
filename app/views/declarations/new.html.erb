@@ -1,13 +1,15 @@
-<div class="container-form" >
-  <div class="form">
-    <h2>Welcome <%= current_user.first_name %></h2>
-    <h5>NIC Number: <%= current_user.nic_number %></h5>
+<div class="c-container" style="background-image: url(/assets/bkg.jpg)">
+  <div class="container-form" >
+    <div class="form">
+      <h2>Welcome <%= current_user.first_name %></h2>
+      <h5>NIC Number: <%= current_user.nic_number %></h5>
 
-    <%= simple_form_for(@declaration) do |f| %>
-      <%= f.input :cof_number, input_html: { class: "input" } %>
-      <%= f.input :policy_insurance_number, input_html: { class: "input" } %>
-      <%= f.collection_select :car_registration_id, CarRegistration.all, :id, :numeric_plate %>
-      <%= f.button :submit, "Submit", class: "btn btn-primary btn-blue" %>
-    <% end %>
+      <%= simple_form_for(@declaration) do |f| %>
+        <%= f.input :cof_number, input_html: { class: "input" } %>
+        <%= f.input :policy_insurance_number, input_html: { class: "input" } %>
+        <%= f.collection_select :car_registration_id, CarRegistration.all, :id, :numeric_plate %>
+        <%= f.button :submit, "Submit", class: "btn btn-primary btn-blue" %>
+      <% end %>
+    </div>
   </div>
 </div>
