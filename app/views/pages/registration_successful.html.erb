@@ -1,9 +1,30 @@
 
-<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-  <div class="card-body">
-    <p class="card-text"><strong>registration</strong> successfully logged, have a wonderful day ahead!!</p>
-      <div class="card-footer bg-transparent border-success">Request Number: <strong><%= @car_registration.request_number %></strong>
-        <%= link_to "Ok", root_path, class:"btn btn-light" %>
-      </div>
+<div class="container p-4">
+   <h3>Your declaration has been successfully been logged. Your informations are here below:</h3>
+  <div class="card text-white bg-dark mb-4">
+    <div class="card-body">
+      <p class="card-text border-bottom border-success"><strong>Client</strong></p>
+      <p class="card-text"><strong>First name:</strong> <%= @user.first_name %> </p>
+      <p class="card-text"><strong>Last name:</strong> <%= @user.last_name %> </p>
+    </div>
+  </div>
+    <div class="card text-white bg-dark mb-4">
+    <div class="card-body">
+      <p class="card-text border-bottom border-success"><strong>Car Registration</strong> </p>
+      <p class="card-text"><strong>Cof Number:</strong> <%= @car_registration.car_make %> </p>
+      <p class="card-text"><strong>Policy Insurance Number:</strong> <%= @car_registration.car_model %> </p>
+      <p class="card-text"><strong>Chassis Number:</strong> <%= @car_registration.chassis_number %> </p>
+      <p class="card-text"><strong>Chassis Number:</strong> <%= @car_registration.engine_number %> </p>
+      <p class="card-text"><strong>Engine Capacity:</strong> <%= @car_registration.engine_capacity %> </p>
+      <p class="card-text"><strong>Numeric Plate::</strong> <%= @car_registration.numeric_plate %> </p>
+    </div>
+  </div>
+    <div class="card text-white bg-dark mb-4">
+    <div class="card-body">
+      <p class="card-text border-bottom border-success"><strong>Ticket</strong></p>
+      <p class="card-text">Your Declaration Request Number: <strong> <%= @car_registration.request_number %> </strong></p>
+      <p>We will get back at you in a moment, thank you for bearing with us.</p>
+      <%= link_to "Ok", root_path, class:"btn btn-light" %>
+    </div>
   </div>
 </div>
