@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container p-4">
    <h3>Your declaration has been successfully been logged. Your informations are here below:</h3>
   <div class="card text-white bg-dark mb-4">
     <div class="card-body">
@@ -18,7 +18,7 @@
     <div class="card-body">
       <p class="card-text border-bottom border-success"><strong>Ticket</strong></p>
       <p class="card-text">Your Declaration Request Number: <strong> <%= @declaration.request_number %> </strong></p>
-       <p>We will get back at you in a moment, thank you for bearing with us.</p>
+      <p>We will get back at you in a moment, thank you for bearing with us.</p>
       <%= link_to "Ok", root_path, class:"btn btn-light" %>
     </div>
   </div>

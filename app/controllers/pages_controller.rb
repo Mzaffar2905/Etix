@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def registration_successful
     @car_registration = CarRegistration.where(user: current_user).last
+    @user = current_user
   end
 
   def declaration_successful
@@ -15,10 +16,12 @@ class PagesController < ApplicationController
 
   def fine_successful
     @fine = Fine.where(user: current_user).last
+    @user = current_user
   end
 
   def generalquery_successful
     @general_question = GeneralQuestion.where(user: current_user).last
+    @user = current_user
   end
 
   def legislation
