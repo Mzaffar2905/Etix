@@ -1,4 +1,9 @@
 
-  <div class="container text-center">
-    <p>Registration successfully logged, your request number is: <strong><%= @car_registration.request_number %></strong>.<br> If you have any queries you may call us on: +23057807059.<br> Have a wonderful day ahead!!</p>
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+  <div class="card-body">
+    <p class="card-text"><strong>registration</strong> successfully logged, have a wonderful day ahead!!</p>
+      <div class="card-footer bg-transparent border-success">Request Number: <strong><%= @car_registration.request_number %></strong>
+        <%= link_to "Ok", root_path, class:"btn btn-light" %>
+      </div>
   </div>
+</div>
