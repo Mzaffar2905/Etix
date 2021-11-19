@@ -10,8 +10,7 @@ class PagesController < ApplicationController
 
   def declaration_successful
     @user = current_user
-    @car_registration = CarRegistration.where(user_id: @user).last
-    @declaration = @car_registration.declarations.last
+    @declaration = Declaration.last
   end
 
   def fine_successful
