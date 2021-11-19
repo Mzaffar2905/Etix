@@ -4,6 +4,14 @@
         <p>
         <span id="banner-typed-text"></span>
         </p>
-      <%= link_to "Login to submit form", new_user_session_path, class:"btn btn-success btn-lg btn-blue"%>
+        <%if user_signed_in?  %>
+          <% if current_user.is_analyst? %>
+            <%= link_to "View my Dashboard", dashboard_user_path(current_user), class:"btn btn-success btn-lg btn-blue"%>
+          <% else %>
+          <%= link_to "Submit form", dashboard_user_path(current_user), class:"btn btn-success btn-lg btn-blue"%>
+          <% end %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class:"btn btn-success btn-lg btn-blue"%>
+        <% end %>
     </div>
   </div>
