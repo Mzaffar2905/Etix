@@ -5,7 +5,7 @@
     <%= simple_form_for(@declaration) do |f| %>
       <%= f.input :cof_number, input_html: { class: "input" } %>
       <%= f.input :policy_insurance_number, input_html: { class: "input" } %>
-      <%= f.collection_select :car_registration_id, CarRegistration.all, :id, :car_make %>
+      <%= f.collection_select :car_registration_id, CarRegistration.all, :id, :numeric_plate %>
       <%= f.submit %>
     <% end %>
 </div>
