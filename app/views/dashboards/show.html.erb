@@ -1,24 +1,25 @@
 
 <h1>Forms FINES pending</h1>
     <% @fines.each do |fine| %>
-    <%= fine.fineticket%>
-    <%= fine.registration_number %>
+    <p>fineticket:</p><%= fine.fineticket%>
+   <p>registration_number:</p> <%= fine.registration_number %>
     <% end %>
 <h1>Declaration form</h1>
     <% @declarations.each do |declaration| %>
-    <%= declaration.policy_insurance_number %>
+  <p>policy_insurance_number:</p> <%= declaration.policy_insurance_number %>
+  <p>cof_number:</p> <%= declaration.cof_number%>
     <% end %> 
 <h1>CarRegistration <form action=""></form></h1>
-    <% @car_registrations.each do |carregistration| %>
-    <%= carregistration.car_make %>
-    <%= carregistration.car_model %>
-    <%= carregistration.chassis_number %>
-    <%= carregistration.engine_number %>
-    <%= carregistration.engine_capacity %>
-    <%= carregistration.numeric_plate %>
+        <% @car_registrations.each do |carregistration| %>
+  <p>car_make</p>  <%= carregistration.car_make %>
+  <p>car_model</p>  <%= carregistration.car_model %>
+   <p>chassis_number:</p> <%= carregistration.chassis_number %>
+  <p>engine_number:</p>  <%= carregistration.engine_number %>
+  <p>engine_capacity:</p>  <%= carregistration.engine_capacity %>
+   <p>numeric_plate :</p> <%= carregistration.numeric_plate %>
     <% end %> 
 <h1>General form</h1>
     <%  @general_questions.each do |generalquestion| %>
-    <%= generalquestion.issue%>
+   <p>issue:</p> <%= generalquestion.issue%>
     <% end %>
 
