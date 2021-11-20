@@ -5,7 +5,7 @@
       <h5>NIC Number: <%= current_user.nic_number %></h5>
 
       <%= simple_form_for(@general_question) do |f| %>
-        <%= f.input :issue, input_html: { class: "input" } %>
+        <%= f.input :issue, input_html: { class: "input" }, placeholder: 'Describe your problem in detail' %>
         <%= f.button :submit, "Submit", class: "btn btn-primary btn-blue" %>
       <% end %>
     </div>
