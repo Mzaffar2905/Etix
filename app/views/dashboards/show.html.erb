@@ -1,14 +1,18 @@
 
 <h1>Forms FINES pending</h1>
     <% @fines.each do |fine| %>
-    <p>fineticket:</p><%= fine.fineticket%>
-   <p>registration_number:</p> <%= fine.registration_number %>
+      <div class="form-card">
+        <p>registration_number:</p> <%= fine.registration_number %>
+      </div>
     <% end %>
+
 <h1>Declaration form</h1>
     <% @declarations.each do |declaration| %>
-  <p>policy_insurance_number:</p> <%= declaration.policy_insurance_number %>
-  <p>cof_number:</p> <%= declaration.cof_number%>
-    <% end %> 
+      <div class="form-card">
+        <p>policy_insurance_number:</p> <%= declaration.policy_insurance_number %>
+        <p>cof_number:</p> <%= declaration.cof_number%>
+      </div>
+    <% end %>
 <h1>CarRegistration <form action=""></form></h1>
         <% @car_registrations.each do |carregistration| %>
   <p>car_make</p>  <%= carregistration.car_make %>
@@ -17,9 +21,8 @@
   <p>engine_number:</p>  <%= carregistration.engine_number %>
   <p>engine_capacity:</p>  <%= carregistration.engine_capacity %>
    <p>numeric_plate :</p> <%= carregistration.numeric_plate %>
-    <% end %> 
+    <% end %>
 <h1>General form</h1>
     <%  @general_questions.each do |generalquestion| %>
    <p>issue:</p> <%= generalquestion.issue%>
     <% end %>
-
