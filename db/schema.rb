@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_064252) do
+ActiveRecord::Schema.define(version: 2021_11_22_071834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2021_11_22_064252) do
 
   create_table "declarations", force: :cascade do |t|
     t.bigint "car_registration_id", null: false
-    t.boolean "declaration_approved"
     t.boolean "payment_done"
     t.date "expiry_date"
     t.datetime "created_at", precision: 6, null: false
@@ -41,6 +40,7 @@ ActiveRecord::Schema.define(version: 2021_11_22_064252) do
     t.integer "request_number"
     t.string "cof_number"
     t.string "policy_insurance_number"
+    t.boolean "declaration_approved", default: false
     t.index ["car_registration_id"], name: "index_declarations_on_car_registration_id"
   end
 
