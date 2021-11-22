@@ -1,31 +1,31 @@
 <div class="card-body">
-	<p class="card-text border-bottom border-success"><strong>Details</strong></p>
+	<p class="card-text border-bottom border-dark"><strong>Details</strong></p>
 	<p class="card-text"><strong>First name:</strong> <%= @user.first_name %> </p>
 	<p class="card-text"><strong>Last name:</strong> <%= @user.last_name %> </p>
-</div>
 
-	<h1>Pending car_registrations</h1>
+
+<p class="card-text border-bottom border-primary"><strong>Pending Car Registrations</strong></p>
 	<% @car_registrations_pending.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<%= f.request_number %>
 	<% end %>
   <% end %>
 
-	<h1>Pending declarations</h1>
+<p class="card-text border-bottom border-primary"><strong>Pending Declarations</strong></p>
 	<%  @declarations_pending.each do |f| %>
 	<% if f.car_registration.user_id == current_user.id %>
 	<%= f.request_number %>
 	<% end %>
 	<% end %>
 
-	<h1>Pending fines</h1>
+<p class="card-text border-bottom border-primary"><strong>Pending Fines</strong></p>
 	<% @fines_pending.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<%= f.request_number %>
 	<% end %>
 	<% end %>
 
-	<h1>Pending question</h1>
+<p class="card-text border-bottom border-primary"><strong>Pending General Questions</strong></p>
 	<% @general_questions_pending.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<%= f.request_number %>
@@ -33,28 +33,28 @@
 	<% end %>
 
 
-	<h1>Validates Car Registration</h1>
+<p class="card-text border-bottom border-success"><strong>Validated Car Registrations</strong></p>
 	<% @car_registrations_validate.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<%= f.request_number %>
 	<% end %>
 	<% end %>
 
-	<h1>Validates Declaration</h1>
+<p class="card-text border-bottom border-success"><strong>Validated Declarations</strong></p>
 	<% @declarations_validate.each do |f| %>
 	<% if f.car_registration.user_id == current_user.id %>
 	<%= f.request_number %>
 	<% end %>
 	<% end %>
 
-	<h1>Validates Fines</h1>
+<p class="card-text border-bottom border-success"><strong>Validated Fines</strong></p>
 	<% @fines_validate.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<%= f.request_number %>
 	<% end %>
 	<% end %>
 
-<h1>Validates general questions</h1>
+<p class="card-text border-bottom border-success"><strong>Validated General Question</strong></p>
 	<% @general_questions_validate.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<%= f.request_number %>
@@ -62,31 +62,32 @@
 	<% end %>
 
 
-	<h1>Rejected car_registration</h1>
+<p class="card-text border-bottom border-danger"><strong>Rejected Car Registrations</strong></p>
 	<% @car_registrations_reject.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<%= f.request_number %>
 	<% end %>
 	<% end %>
 
-  <h1>Rejected car_declaration</h1>
+<p class="card-text border-bottom border-danger"><strong>Rejected Car Declarations</strong></p>
 	<% @declarations_reject.each do |f| %>
 	<% if f.car_registration.user_id == current_user.id %>
 	<%= f.request_number %>
 	<% end %>
 	<% end %>
 
- <h1>Rejected fines</h1>
+<p class="card-text border-bottom border-danger"><strong>Rejected Fines</strong></p>
 	<% @fines_reject.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<%= f.request_number %>
 	<% end %>
 	<% end %>
 
-  <h1>Rejected general questions</h1>
+<p class="card-text border-bottom border-danger"><strong>General Questions</strong></p>
 	<% @general_questions_reject.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<%= f.request_number %>
 	<% end %>
 	<% end %>
 	
+</div>
