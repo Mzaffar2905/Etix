@@ -39,6 +39,20 @@ class CarRegistrationsController < ApplicationController
     end
   end
 
+  def validate
+    @car_registration = CarRegistration.find(params[:id])
+    @car_registration.registration_approved = "Validate"
+    @car_registration.save!
+    redirect_to dashboard_analyst_path
+  end
+
+  def reject
+    @car_registration = CarRegistration.find(params[:id])
+    @car_registration.registration_approved = "Rejected"
+    @car_registration.save!
+    redirect_to dashboard_analyst_path
+  end
+
   private
 
   def car_registration_params
