@@ -1,4 +1,4 @@
-h1 {
+.cardtitle {
   display: flex;
   justify-content: center;
   font-family: 'Roboto, Oxygen', 'Ubuntu', 'Open Sans', sans-serif;
@@ -8,11 +8,16 @@ h1 {
 .allcarregistrations {
   max-height: 275px;
   overflow: scroll;
+  color: #FAEEE7;
 }
 
-p {
+.cardtext {
   margin-top: 17px;
   text-align: left;
   margin-bottom: -1rem;
   font-size: 18px;
 }
+
+ body {
+   background-image: url('https://media.istockphoto.com/vectors/abstract-triangular-background-vector-id1209030907?k=20&m=1209030907&s=612x612&w=0&h=IzJ-ZlF4OylSRkZFzOC-5GsoZoJaY0Ue2equU28aDkE=');
+ }
