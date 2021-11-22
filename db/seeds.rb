@@ -15,6 +15,7 @@ mozaffar=User.create(email:"mozaf2905@outlook.com", password:"qwerty", first_nam
 
 
 
+
 toyota=CarRegistration.create(car_make:"Toyota", car_model:"Auris", chassis_number:"NSP151R-BHXRKE", engine_number:"2NR-FE", engine_capacity:"1800cc", user:mozaffar, numeric_plate:"1F", request_number:"54671")
 nissan=CarRegistration.create(car_make:"Nissan", car_model:"Qashqai", chassis_number:"1G1YM3D78ESH7", engine_number:"4E-G321", engine_capacity:"1499cc", user:mozaffar, numeric_plate:"688", request_number:"99982")
 honda=CarRegistration.create(car_make:"Honda", car_model:"Vezel", chassis_number:"T7BG0M7-NH788P", engine_number:"DAA-RU3", engine_capacity:"1500cc", user:mozaffar, numeric_plate:"1111 AK", request_number:"63725")
