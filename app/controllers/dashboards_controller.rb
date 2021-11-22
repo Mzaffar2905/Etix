@@ -21,4 +21,7 @@ class DashboardsController < ApplicationController
     @user = current_user
     # @car_registrations = CarRegistration.where(user_id == current_user)
   end
+
+  def dashbord_list_form
+    @user = current_user
 end
