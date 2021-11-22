@@ -1,0 +1,26 @@
+<div class="container-2 p-4 ">
+   <h3>Request Number:</h3>
+  <div class="card text-white bg-dark mb-4">
+    <div class="card-body">
+      <p class="card-text border-bottom border-success"><strong>Client</strong></p>
+      <p class="card-text"><strong>First name:</strong> <%= @generalquery.user.first_name %> </p>
+      <p class="card-text"><strong>Last name:</strong> <%= @generalquery.user.last_name %> </p>
+    </div>
+  </div>
+
+    <div class="card text-white bg-dark mb-4">
+    <div class="card-body">
+      <p class="card-text"><strong>Issue:</strong> <%= @general_question.issue %> </p>
+    </div>
+  </div>
+
+    <div class="card text-white bg-dark">
+    <div class="card-body">
+      <p class="card-text border-bottom border-success"><strong>Ticket</strong></p>
+      <p class="card-text">Your General Inquiry Request Number: <strong> <%= @general_question.request_number %> </strong></p>
+      <p>We will get back at you in a moment, thank you for bearing with us.</p>
+      <%= link_to "Validate", root_path, class:"btn btn-success btn-sm btn-blue" %>
+      <%= link_to "Reject", root_path, class:"btn btn-danger btn-sm btn-blue" %>
+    </div>
+  </div>
+</div>

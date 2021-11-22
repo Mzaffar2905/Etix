@@ -1,0 +1,21 @@
+<div class="container-2 p-4">
+  <h3>Request Number:</h3>
+  <div class="card text-white bg-dark mb-4">
+    <div class="card-body">
+      <p class="card-text"><strong>First name:</strong> <%= @fine.user.first_name %> </p>
+      <p class="card-text"><strong>Last name:</strong> <%= @fine.user.last_name %> </p>
+    </div>
+  </div>
+  <div class="card text-white bg-dark mb-4">
+    <div class="card-body">
+      <p class="card-text"><strong>Fine Ticket:</strong> <%= @fine.fineticket %> </p>
+      <p class="card-text"><strong>Registration Number:</strong> <%= @fine.registration_number %> </p>
+    </div>
+  </div>
+  <div class="card text-white bg-dark"->
+    <div class="card-body">
+      <%= link_to "Validate", root_path, class:"btn btn-success btn-sm btn-blue" %>
+      <%= link_to "Reject", root_path, class:"btn btn-danger btn-sm btn-blue" %>
+    </div>
+  </div>
+</div>
