@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'registration_successful', to: 'pages#registration_successful'
   resources :car_registrations do
-    member do 
+    member do
       patch 'validate'
-      patch 'reject' 
+      patch 'reject'
     end
   end
   get 'declaration_successful', to: 'pages#declaration_successful'

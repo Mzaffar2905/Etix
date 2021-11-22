@@ -1,45 +1,45 @@
-<h1>Car Registration</h1>
-  <div class="allcarregistrations bg-warning">
+<h1 class="cardtitle text-light">Car Registration</h1>
+  <div class="allcarregistrations">
     <% @car_registrations.each do |carregistration| %>
       <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
         <div class="card-body text-dark text-right">
-         <p> <%= carregistration.user.first_name %> wants to register his car </p>
+         <p class="cardtext" ><%= carregistration.user.first_name %> wants to register his car </p>
           <%= link_to "View Form", car_registration_path(carregistration), class:"btn btn-outline-dark" %>
         </div>
       </div>
     <% end %>
   </div>
 
-<h1>Declaration form</h1>
-  <div class="allcarregistrations bg-success">
+<h1 class="cardtitle text-light">Declaration form</h1>
+  <div class="allcarregistrations">
     <% @declarations.each do |declaration| %>
       <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
         <div class="card-body text-dark text-right">
-          <p> <%= declaration.car_registration.user.first_name %> wants to declare his car</p>
+          <p class="cardtext"> <%= declaration.car_registration.user.first_name %> wants to declare his car</p>
           <%= link_to "View Form",  declaration_path(declaration), class:"btn btn-outline-dark" %>
         </div>
       </div>
     <% end %>
   </div>
 
-<h1>Forms Fines pending</h1>
-  <div class="allcarregistrations bg-info">
+<h1 class="cardtitle text-light">Forms Fines pending</h1>
+  <div class="allcarregistrations">
     <% @fines.each do |fine| %>
       <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
         <div class="card-body text-dark text-right">
-          <p> <%= fine.user.first_name %> wants pay his fine </p>
+          <p class="cardtext"> <%= fine.user.first_name %> wants pay his fine </p>
           <%= link_to "View Form", fine_path(fine), class:"btn btn-outline-dark" %>
         </div>
       </div>
     <% end %>
   </div>
 
-<h1>General form</h1>
-  <div class="allcarregistrations bg-danger">
+<h1 class="cardtitle text-light">General form</h1>
+  <div class="allcarregistrations">
     <%  @general_questions.each do |generalquestion| %>
       <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
         <div class="card-body text-dark text-right">
-         <p> <%= generalquestion.user.first_name %> has a general question </p>
+         <p class="cardtext"> <%= generalquestion.user.first_name %> has a general question </p>
           <%= link_to "View Form", general_question_path(generalquestion), class:"btn btn-outline-dark" %>
         </div>
       </div>
