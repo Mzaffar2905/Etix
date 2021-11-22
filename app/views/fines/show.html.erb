@@ -14,8 +14,8 @@
   </div>
   <div class="card text-white bg-dark"->
     <div class="card-body">
-      <%= link_to "Validate", root_path, class:"btn btn-success btn-sm btn-blue" %>
-      <%= link_to "Reject", root_path, class:"btn btn-danger btn-sm btn-blue" %>
+      <%= link_to "Validate", validate_fine_path(@fine), method: "patch",  class:"btn btn-success btn-sm btn-blue" %>
+      <%= link_to "Reject", reject_fine_path(@fine), method: "patch", class:"btn btn-danger btn-sm btn-blue" %>
     </div>
   </div>
 </div>

@@ -35,6 +35,19 @@ class FinesController < ApplicationController
       render :new
     end
   end
+  def validate
+    @fine = Fine.find(params[:id])
+    @fine.fine_approved = "Validate"
+    @fine.save!
+    redirect_to dashboard_analyst_path
+  end
+
+  def reject
+    @fine = Fine.find(params[:id])
+    @fine.fine_approved = "Rejected"
+    @fine.save!
+    redirect_to dashboard_analyst_path
+  end
 
 private
 
