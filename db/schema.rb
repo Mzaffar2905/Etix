@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_071834) do
+ActiveRecord::Schema.define(version: 2021_11_22_103254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_11_22_071834) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "request_number"
-    t.boolean "registration_approved", default: false
+    t.string "registration_approved", default: "pending"
     t.index ["user_id"], name: "index_car_registrations_on_user_id"
   end
 
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_11_22_071834) do
     t.integer "request_number"
     t.string "cof_number"
     t.string "policy_insurance_number"
-    t.boolean "declaration_approved", default: false
+    t.string "declaration_approved", default: "pending"
     t.index ["car_registration_id"], name: "index_declarations_on_car_registration_id"
   end
 
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_11_22_071834) do
     t.integer "registration_number"
     t.bigint "user_id"
     t.integer "request_number"
+    t.string "fine_approved", default: "pending"
     t.index ["user_id"], name: "index_fines_on_user_id"
   end
 
