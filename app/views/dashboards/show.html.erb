@@ -1,39 +1,47 @@
-<h1>CarRegistration <form action=""></form></h1>
+<h1>Car Registration</h1>
+  <div class="allcarregistrations">
     <% @car_registrations.each do |carregistration| %>
-      <div class="card border-dark mb-3" style="max-width: 100rem;">
-        <div class="card-body text-dark">
+      <div class="card border-dark mb-3 ml-3" style="max-width: 100rem;">
+        <div class="card-body text-dark text-center">
           <%= carregistration.user.first_name %> <p>wants to register his car</p>
           <%= link_to "View Form", root_path, class:"btn btn-primary btn-blue" %>
         </div>
       </div>
     <% end %>
+  </div>
 
 <h1>Declaration form</h1>
+  <div class="allcarregistrations">
     <% @declarations.each do |declaration| %>
-      <div class="card border-dark mb-3" style="max-width: 100rem;">
-        <div class="card-body text-dark">
+      <div class="card border-dark mb-3 ml-3" style="max-width: 100rem;">
+        <div class="card-body text-dark text-center">
           <%= declaration.car_registration.user.first_name %> <p>wants to declare his car</p>
           <%= link_to "View Form", root_path, class:"btn btn-primary btn-blue" %>
         </div>
       </div>
     <% end %>
+  </div>
 
 <h1>Forms FINES pending</h1>
+  <div class="allcarregistrations">
     <% @fines.each do |fine| %>
-      <div class="card border-dark mb-3" style="max-width: 100rem;">
-        <div class="card-body text-dark">
+      <div class="card border-dark mb-3 ml-3" style="max-width: 100rem;">
+        <div class="card-body text-dark text-center">
           <%= fine.user.first_name %> <p>wants pay his fine</p>
           <%= link_to "View Form", root_path, class:"btn btn-primary btn-blue" %>
         </div>
       </div>
     <% end %>
+  </div>
 
 <h1>General form</h1>
+  <div class="allcarregistrations">
     <%  @general_questions.each do |generalquestion| %>
-      <div class="card border-dark mb-3" style="max-width: 100rem;">
-        <div class="card-body text-dark">
+      <div class="card border-dark mb-3 ml-3" style="max-width: 100rem;">
+        <div class="card-body text-dark text-center">
           <%= generalquestion.user.first_name %> <p>has a general question</p>
           <%= link_to "View Form", root_path, class:"btn btn-primary btn-blue" %>
         </div>
       </div>
     <% end %>
+  </div>
