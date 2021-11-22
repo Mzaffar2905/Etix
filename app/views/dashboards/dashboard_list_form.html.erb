@@ -1,46 +1,92 @@
-<h1>Pending</h1>
-<% @car_registrations_pending.each do |f| %>
-<%= f.request_number %>
-<%end %>
-<%  @declarations_pending.each do |f| %>
-<%= f.request_number %>
-<%end %>
-<% @fines_pending.each do |f| %>
-<%= f.request_number %>
-<%end %>
-<% @general_questions_pending.each do |f| %>
-<%= f.request_number %>
-<%end %>
+<div class="card-body">
+	<p class="card-text border-bottom border-success"><strong>Details</strong></p>
+	<p class="card-text"><strong>First name:</strong> <%= @user.first_name %> </p>
+	<p class="card-text"><strong>Last name:</strong> <%= @user.last_name %> </p>
+</div>
+
+	<h1>Pending car_registrations</h1>
+	<% @car_registrations_pending.each do |f| %>
+	<% if f.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+  <% end %>
+
+	<h1>Pending declarations</h1>
+	<%  @declarations_pending.each do |f| %>
+	<% if f.car_registration.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
+
+	<h1>Pending fines</h1>
+	<% @fines_pending.each do |f| %>
+	<% if f.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
+
+	<h1>Pending question</h1>
+	<% @general_questions_pending.each do |f| %>
+	<% if f.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
 
 
-<h1>Validates</h1>
-<% @car_registrations_validate.each do |f| %>
-<%= f.request_number %>
-<%end %>
-<% @declarations_validate.each do |f| %>
-<%= f.request_number %>
-<%end %>
-<% @fines_validate.each do |f| %>
-<%= f.request_number %>
-<%end %>
-<% @general_questions_validate.each do |f| %>
-<%= f.request_number %>
-<%end %>
+	<h1>Validates Car Registration</h1>
+	<% @car_registrations_validate.each do |f| %>
+	<% if f.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
+
+	<h1>Validates Declaration</h1>
+	<% @declarations_validate.each do |f| %>
+	<% if f.car_registration.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
+
+	<h1>Validates Fines</h1>
+	<% @fines_validate.each do |f| %>
+	<% if f.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
+
+<h1>Validates general questions</h1>
+	<% @general_questions_validate.each do |f| %>
+	<% if f.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
 
 
-<h1>Rejected</h1>
-<% @car_registrations_reject.each do |f| %>
-<%= f.request_number %>
-<%end %>
-<% @declarations_reject.each do |f| %>
-<%= f.request_number %>
-<%end %>
-<% @fines_reject.each do |f| %>
-<%= f.request_number %>
-<%end %>
-<% @general_questions_reject.each do |f| %>
-<%= f.request_number %>
-<%end %>
+	<h1>Rejected car_registration</h1>
+	<% @car_registrations_reject.each do |f| %>
+	<% if f.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
 
+  <h1>Rejected car_declaration</h1>
+	<% @declarations_reject.each do |f| %>
+	<% if f.car_registration.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
 
-      
+ <h1>Rejected fines</h1>
+	<% @fines_reject.each do |f| %>
+	<% if f.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
+
+  <h1>Rejected general questions</h1>
+	<% @general_questions_reject.each do |f| %>
+	<% if f.user_id == current_user.id %>
+	<%= f.request_number %>
+	<% end %>
+	<% end %>
+	
