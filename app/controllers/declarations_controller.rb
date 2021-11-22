@@ -40,6 +40,20 @@ class DeclarationsController < ApplicationController
     end
   end
 
+  def validate
+    @declaration = Declaration.find(params[:id])
+    @declaration.declaration_approved = "Validate"
+    @declaration.save!
+    redirect_to dashboard_analyst_path
+  end
+
+  def reject
+    @declaration = Declaration.find(params[:id])
+    @declaration.declaration_approved = "Rejected"
+    @declaration.save!
+    redirect_to dashboard_analyst_path
+  end
+
   private
 
   def declaration_params

@@ -3,8 +3,8 @@
   <div class="card text-white bg-dark mb-4">
     <div class="card-body">
       <p class="card-text border-bottom border-success"><strong>Client</strong></p>
-      <p class="card-text"><strong>First name:</strong> <%= @generalquery.user.first_name %> </p>
-      <p class="card-text"><strong>Last name:</strong> <%= @generalquery.user.last_name %> </p>
+      <p class="card-text"><strong>First name:</strong> <%= @general_question.user.first_name %> </p>
+      <p class="card-text"><strong>Last name:</strong> <%= @general_question.user.last_name %> </p>
     </div>
   </div>
 
@@ -19,8 +19,8 @@
       <p class="card-text border-bottom border-success"><strong>Ticket</strong></p>
       <p class="card-text">Your General Inquiry Request Number: <strong> <%= @general_question.request_number %> </strong></p>
       <p>We will get back at you in a moment, thank you for bearing with us.</p>
-      <%= link_to "Validate", root_path, class:"btn btn-success btn-sm btn-blue" %>
-      <%= link_to "Reject", root_path, class:"btn btn-danger btn-sm btn-blue" %>
+      <%= link_to "Validate",validate_general_question_path(@general_question), method: "patch", class:"btn btn-success btn-sm btn-blue" %>
+      <%= link_to "Reject", reject_general_question_path(@general_question), method: "patch", class:"btn btn-danger btn-sm btn-blue" %>
     </div>
   </div>
 </div>

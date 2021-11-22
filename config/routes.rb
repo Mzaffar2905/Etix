@@ -9,13 +9,28 @@ Rails.application.routes.draw do
     end
   end
   get 'declaration_successful', to: 'pages#declaration_successful'
-  resources :declarations
+  resources :declarations do
+    member do 
+    patch 'validate'
+    patch 'reject' 
+    end
+  end
   get 'generalquery_successful', to: 'pages#generalquery_successful'
 
-  resources :general_questions
+  resources :general_questions do
+    member do 
+    patch 'validate'
+    patch 'reject' 
+    end
+  end
 
     get 'fine_successful', to: 'pages#fine_successful'
-  resources :fines
+  resources :fines do
+    member do 
+    patch 'validate'
+    patch 'reject' 
+    end
+  end
   get 'legislation', to: 'pages#legislation'
   get 'dashboard_analyst', to: 'dashboards#dashboard_analyst', as: 'dashboard_analyst'
   get 'dashboard_user', to: 'dashboards#dashboard_user', as: 'dashboard_user'

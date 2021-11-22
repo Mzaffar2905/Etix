@@ -10,8 +10,8 @@ class DashboardsController < ApplicationController
 
     @car_registrations = CarRegistration.where registration_approved: "pending"
     @declarations = Declaration.where declaration_approved: "pending"
-    @fines = Fine.all
-    @general_questions = GeneralQuestion.all
+    @fines = Fine.where fine_approved: "pending"
+    @general_questions = GeneralQuestion.where question_approved: "pending"
     else
     render :dashboard_analyst
     end
