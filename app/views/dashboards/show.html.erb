@@ -1,28 +1,39 @@
-
-<h1>Forms FINES pending</h1>
-    <% @fines.each do |fine| %>
+<h1>CarRegistration <form action=""></form></h1>
+    <% @car_registrations.each do |carregistration| %>
       <div class="card border-dark mb-3" style="max-width: 100rem;">
         <div class="card-body text-dark">
-          <p>registration_number:</p> <%= fine.registration_number %>
+          <%= carregistration.user.first_name %> <p>wants to register his car</p>
+          <%= link_to "View Form", root_path, class:"btn btn-primary btn-blue" %>
         </div>
       </div>
     <% end %>
 
 <h1>Declaration form</h1>
     <% @declarations.each do |declaration| %>
-      <div class="form-card">
-        <p>declarationapproved</p>  <%= declaration.declaration_approved %>
+      <div class="card border-dark mb-3" style="max-width: 100rem;">
+        <div class="card-body text-dark">
+          <%= declaration.car_registration.user.first_name %> <p>wants to declare his car</p>
+          <%= link_to "View Form", root_path, class:"btn btn-primary btn-blue" %>
+        </div>
       </div>
     <% end %>
-<h1>CarRegistration <form action=""></form></h1>
-    <% @car_registrations.each do |carregistration| %>
-      <div class="form-card">
-        <p>registration_approved</p>  <%= carregistration.registration_approved %>
+
+<h1>Forms FINES pending</h1>
+    <% @fines.each do |fine| %>
+      <div class="card border-dark mb-3" style="max-width: 100rem;">
+        <div class="card-body text-dark">
+          <%= fine.user.first_name %> <p>wants pay his fine</p>
+          <%= link_to "View Form", root_path, class:"btn btn-primary btn-blue" %>
+        </div>
       </div>
     <% end %>
+
 <h1>General form</h1>
     <%  @general_questions.each do |generalquestion| %>
-    <div class="form-card">
-       <p>issue:</p> <%= generalquestion.issue%>
-    </div>
+      <div class="card border-dark mb-3" style="max-width: 100rem;">
+        <div class="card-body text-dark">
+          <%= generalquestion.user.first_name %> <p>has a general question</p>
+          <%= link_to "View Form", root_path, class:"btn btn-primary btn-blue" %>
+        </div>
+      </div>
     <% end %>

@@ -8,7 +8,6 @@ class DashboardsController < ApplicationController
     # @car_registrations = CarRegistration.where.not payment_done: true
     # @general_questions = GeneralQuestion.all
 
-
     @car_registrations = CarRegistration.where.not registration_approved: true
     @declarations = Declaration.where.not declaration_approved: true
     @fines = Fine.all
