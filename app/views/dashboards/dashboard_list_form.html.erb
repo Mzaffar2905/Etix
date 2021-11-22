@@ -1,1 +1,46 @@
-<h1>TEST</h1>
+<h1>Pending</h1>
+<% @car_registrations_pending.each do |f| %>
+<%= f.request_number %>
+<%end %>
+<%  @declarations_pending.each do |f| %>
+<%= f.request_number %>
+<%end %>
+<% @fines_pending.each do |f| %>
+<%= f.request_number %>
+<%end %>
+<% @general_questions_pending.each do |f| %>
+<%= f.request_number %>
+<%end %>
+
+
+<h1>Validates</h1>
+<% @car_registrations_validate.each do |f| %>
+<%= f.request_number %>
+<%end %>
+<% @declarations_validate.each do |f| %>
+<%= f.request_number %>
+<%end %>
+<% @fines_validate.each do |f| %>
+<%= f.request_number %>
+<%end %>
+<% @general_questions_validate.each do |f| %>
+<%= f.request_number %>
+<%end %>
+
+
+<h1>Rejected</h1>
+<% @car_registrations_reject.each do |f| %>
+<%= f.request_number %>
+<%end %>
+<% @declarations_reject.each do |f| %>
+<%= f.request_number %>
+<%end %>
+<% @fines_reject.each do |f| %>
+<%= f.request_number %>
+<%end %>
+<% @general_questions_reject.each do |f| %>
+<%= f.request_number %>
+<%end %>
+
+
+      

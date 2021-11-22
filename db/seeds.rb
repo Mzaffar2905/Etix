@@ -11,7 +11,7 @@ Declaration.destroy_all
 CarRegistration.destroy_all
 User.destroy_all
 mozaffar=User.create(email:"mozaf2905@outlook.com", password:"qwerty", first_name:"Mozaffar", last_name:"Beekun",nic_number:"B290599381191E",license_number:"798413",phone_number:"+230 57453608",is_analyst: true)
-
+User.create(email:"mozaf2905@yahoo.com", password:"qwerty", first_name:"Mozaffar", last_name:"Beekun",nic_number:"B290599381191E",license_number:"798413",phone_number:"+230 57453608",is_analyst: false)
 
 
 
@@ -32,11 +32,11 @@ Declaration.create(car_registration:hyundai, expiry_date:"29/09/21", cof_number:
 
 
 
-Fine.create(fineticket:"68349", user:mozaffar, fine_approved:"pending", request_number:"76453")
-Fine.create(fineticket:"09324", user:mozaffar, fine_approved:"pending", request_number:"12347")
-Fine.create(fineticket:"54639", user:mozaffar, fine_approved:"pending", request_number:"23459")
-Fine.create(fineticket:"98346", user:mozaffar, fine_approved:"pending", request_number:"78940")
-Fine.create(fineticket:"65435", user:mozaffar, fine_approved:"pending", request_number:"45747")
+Fine.create(fineticket:"68349", user:mozaffar, fine_approved:"pending", request_number:"76453",registration_number:"789")
+Fine.create(fineticket:"09324", user:mozaffar, fine_approved:"pending", request_number:"12347",registration_number:"456")
+Fine.create(fineticket:"54639", user:mozaffar, fine_approved:"pending", request_number:"23459",registration_number:"123")
+Fine.create(fineticket:"98346", user:mozaffar, fine_approved:"pending", request_number:"78940",registration_number:"321")
+Fine.create(fineticket:"65435", user:mozaffar, fine_approved:"pending", request_number:"45747",registration_number:"654")
 
 
 
