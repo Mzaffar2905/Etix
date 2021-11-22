@@ -35,6 +35,6 @@ Rails.application.routes.draw do
   get 'dashboard_analyst', to: 'dashboards#dashboard_analyst', as: 'dashboard_analyst'
   get 'dashboard_user', to: 'dashboards#dashboard_user', as: 'dashboard_user'
 
-  get 'dashbord_list_form', to: 'dashboards#dashboard_list_form', as: 'dashboard_list_form'
+  get 'dashboard_list_form', to: 'dashboards#dashboard_list_form', as: 'dashboard_list_form'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
