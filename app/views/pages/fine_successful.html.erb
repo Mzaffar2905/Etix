@@ -1,10 +1,5 @@
-
-
-
 <div class="container-2 p-4">
-
-
-   <h3>Your fine has been successfully been logged. Your informations are here below:</h3>
+  <h3>Your fine has been successfully been logged. Your informations are here below:</h3>
   <div class="card text-white bg-dark mb-4">
     <div class="card-body">
       <p class="card-text border-bottom border-success"><strong>Client</strong></p>
@@ -12,14 +7,15 @@
       <p class="card-text"><strong>Last name:</strong> <%= @user.last_name %> </p>
     </div>
   </div>
-    <div class="card text-white bg-dark mb-4">
+
+  <div class="card text-white bg-dark mb-4">
     <div class="card-body">
       <p class="card-text border-bottom border-success"><strong>Declaration</strong> </p>
       <p class="card-text"><strong>Fine Ticket:</strong> <%= @fine.fineticket %> </p>
       <p class="card-text"><strong>Registration Number:</strong> <%= @fine.registration_number %> </p>
     </div>
   </div>
-    <div class="card text-white bg-dark">
+  <div class="card text-white bg-dark">
     <div class="card-body">
       <p class="card-text border-bottom border-success"><strong>Ticket</strong></p>
       <p class="card-text">Your Fine Request Number: <strong> <%= @fine.request_number %> </strong></p>
