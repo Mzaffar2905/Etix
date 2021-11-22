@@ -24,4 +24,5 @@ class DashboardsController < ApplicationController
 
   def dashbord_list_form
     @user = current_user
+  end
 end
