@@ -1,8 +1,10 @@
 
 <h1>Forms FINES pending</h1>
     <% @fines.each do |fine| %>
-      <div class="form-card">
-        <p>registration_number:</p> <%= fine.registration_number %>
+      <div class="card border-dark mb-3" style="max-width: 100rem;">
+        <div class="card-body text-dark">
+          <p>registration_number:</p> <%= fine.registration_number %>
+        </div>
       </div>
     <% end %>
 
