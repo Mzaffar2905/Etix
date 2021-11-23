@@ -22,6 +22,7 @@ class DeclarationsController < ApplicationController
     @user = current_user
     @declaration = Declaration.new
     @car_registration = CarRegistration.find_by(user_id: @user)
+    @car_registrations = CarRegistration.where(user: current_user)
     @declaration.car_registration = @car_registration
   end
 
