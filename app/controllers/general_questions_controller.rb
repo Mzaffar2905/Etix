@@ -26,6 +26,11 @@ class GeneralQuestionsController < ApplicationController
     @general_question = GeneralQuestion.new
   end
 
+  def show
+    @general_question = GeneralQuestion.find(params[:id])
+    @user = current_user
+  end
+
   def create
       @general_question = GeneralQuestion.new(generalquestion_params)
       @request_number = set_random_number
