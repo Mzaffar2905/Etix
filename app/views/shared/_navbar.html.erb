@@ -22,7 +22,9 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://cdn-icons-png.flaticon.com/512/3237/3237476.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%if !current_user.is_analyst? %>
             <%= link_to "My Request", dashboard_list_form_path, class: "dropdown-item" %>
+            <%end%>
             <%if current_user.is_analyst? %>
             <%= link_to "My Dashboard", dashboard_analyst_path(current_user) , class: "dropdown-item" %>
             <%else%>
