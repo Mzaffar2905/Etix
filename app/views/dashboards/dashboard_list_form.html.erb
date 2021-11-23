@@ -61,6 +61,7 @@
 	<% @general_questions_validate.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
+  <%= link_to "View Details", general_question_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
 	<% end %>
 
@@ -89,10 +90,11 @@
 	<% end %>
 	<% end %>
 
-<p class="card-text border-bottom border-danger"><strong>General Questions</strong></p>
+<p class="card-text border-bottom border-danger"><strong>Rejected General Questions</strong></p>
 	<% @general_questions_reject.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
+  <%= link_to "Re-fill Form", new_general_question_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
 	<% end %>
 
