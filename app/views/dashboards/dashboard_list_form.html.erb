@@ -70,7 +70,7 @@
 	<% @car_registrations_reject.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
-  <%= link_to "Re-fill Form", new_car_registration_path(f), class:"btn btn-outline-danger"%>
+  <%= link_to "View Details", car_registration_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
 	<% end %>
 
@@ -78,7 +78,7 @@
 	<% @declarations_reject.each do |f| %>
 	<% if f.car_registration.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
-  <%= link_to "Re-fill Form", new_declaration_path(f), class:"btn btn-outline-dark"%>
+  <%= link_to "View Details", declaration_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
 	<% end %>
 
@@ -86,7 +86,7 @@
 	<% @fines_reject.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
-  <%= link_to "View Details", new_fine_path(f), class:"btn btn-outline-dark"%>
+  <%= link_to "View Details", fine_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
 	<% end %>
 
@@ -94,7 +94,7 @@
 	<% @general_questions_reject.each do |f| %>
 	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
-  <%= link_to "Re-fill Form", new_general_question_path(f), class:"btn btn-outline-dark"%>
+  <%= link_to "View Details", general_question_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
 	<% end %>
 
