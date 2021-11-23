@@ -44,10 +44,14 @@
 
   .card-trip {
     overflow: hidden;
-    background: white;
+    background: rgb(252, 248, 248);
     width: 400px;
     margin-left: 65px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: all 0.5s ease-out;
+  &:hover {
+    transform: scale(1.02);
+  }
   }
 
   .card-trip > img {
