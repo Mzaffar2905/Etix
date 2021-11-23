@@ -98,7 +98,7 @@
 <p class="card-text border-bottom border-danger"><strong>Rejected General Questions</strong></p>
 	<% @general_questions_reject.each do |f| %>
 	<p>Request number: <%= f.request_number %></p>
-  <%= link_to "View Details", general_question_path(f), class:"btn btn-outline-dark"%>
+    <%= link_to "View Details", general_question_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
 <% end %>
 </div>
