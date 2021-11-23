@@ -66,3 +66,4 @@ class DeclarationsController < ApplicationController
     params.require(:declaration).permit(:cof_number, :car_registration, :car_registration_id, :policy_insurance_number, :expiry_date, :declaration_approved, :payment_done?)
   end
 end
+
