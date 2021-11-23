@@ -1,4 +1,5 @@
 class Fine < ApplicationRecord
   belongs_to :user
-  #validates :fineticket, :registration_number, presence: true
+  validates :fineticket, presence: true
+  validates :registration_number, presence: true
 end
