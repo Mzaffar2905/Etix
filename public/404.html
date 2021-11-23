@@ -10,6 +10,7 @@
     text-align: center;
     font-family: arial, sans-serif;
     margin: 0;
+    background-image: linear-gradient(#FC5C7D, #6A82FB);
   }
 
   .rails-default-error-page div.dialog {
@@ -19,28 +20,29 @@
   }
 
   .rails-default-error-page div.dialog > div {
+    background-image: linear-gradient(#59c173,#a17fe0,#5d26c1);
     border: 1px solid #CCC;
     border-right-color: #999;
     border-left-color: #999;
     border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
+    border-top: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 19px;
     padding: 7px 12% 0;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
 
   .rails-default-error-page h1 {
     font-size: 100%;
-    color: #730E15;
     line-height: 1.5em;
+    font-weight: bolder;
   }
 
   .rails-default-error-page div.dialog > p {
+    background-image: linear-gradient(#ee9ca7,#6dd5ed);
     margin: 0 0 1em;
     padding: 1em;
-    background-color: #F7F7F7;
+    color: black;
     border: 1px solid #CCC;
     border-right-color: #999;
     border-left-color: #999;
@@ -48,20 +50,47 @@
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     border-top-color: #DADADA;
-    color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+
+  .hit-the-floor {
+  font-size: 12em;
+  font-weight: bold;
+  font-family: Helvetica;
+  text-shadow:
+    0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+
   </style>
 </head>
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/404.html -->
   <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
+      <div class="hit-the-floor">404</div>
       <p>You may have mistyped the address or the page may have moved.</p>
+      <p>If you are the application owner check the logs for more information.</p>
+      <p>The page you were looking for doesn't exist.</p>
+      <p>Try again in some minute!!</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-frown"
+          viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+          <path
+            d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
+        </svg>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
   </div>
-</body>
-</html>
+  </body>
+  </html>
