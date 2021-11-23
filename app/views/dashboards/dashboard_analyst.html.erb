@@ -1,49 +1,49 @@
 <div class="background">
-  <h1 class="cardtitle text-light">Car Registration</h1>
-    <div class="allcarregistrations">
-      <% @car_registrations.each do |carregistration| %>
-        <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
-          <div class="card-body text-dark text-right">
-          <p class="cardtext" ><%= carregistration.user.first_name %> wants to register his car </p>
-            <%= link_to "View Form", validation_car_registration_path(carregistration), class:"btn btn-outline-dark" %>
+    <h1 class="cardtitle text-light">Car Registration</h1>
+      <div class="allcarregistrations">
+        <% @car_registrations.each do |carregistration| %>
+          <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
+            <div class="card-body text-dark text-right">
+            <p class="cardtext" ><%= carregistration.user.first_name %> wants to register his car </p>
+              <%= link_to "View Form", validation_car_registration_path(carregistration), class:"btn btn-outline-dark" %>
+            </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
 
-  <h1 class="cardtitle text-light">Declaration form</h1>
-    <div class="allcarregistrations">
-      <% @declarations.each do |declaration| %>
-        <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
-          <div class="card-body text-dark text-right">
-            <p class="cardtext"> <%= declaration.car_registration.user.first_name %> wants to declare his car</p>
-            <%= link_to "View Form",  validation_declaration_path(declaration), class:"btn btn-outline-dark" %>
+    <h1 class="cardtitle text-light">Declaration form</h1>
+      <div class="allcarregistrations">
+        <% @declarations.each do |declaration| %>
+          <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
+            <div class="card-body text-dark text-right">
+              <p class="cardtext"> <%= declaration.car_registration.user.first_name %> wants to declare his car</p>
+              <%= link_to "View Form",  validation_declaration_path(declaration), class:"btn btn-outline-dark" %>
+            </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
 
-  <h1 class="cardtitle text-light">Forms Fines pending</h1>
-    <div class="allcarregistrations">
-      <% @fines.each do |fine| %>
-        <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
-          <div class="card-body text-dark text-right">
-            <p class="cardtext"> <%= fine.user.first_name %> wants pay his fine </p>
-            <%= link_to "View Form", validation_fine_path(fine), class:"btn btn-outline-dark" %>
+    <h1 class="cardtitle text-light">Forms Fines pending</h1>
+      <div class="allcarregistrations">
+        <% @fines.each do |fine| %>
+          <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
+            <div class="card-body text-dark text-right">
+              <p class="cardtext"> <%= fine.user.first_name %> wants pay his fine </p>
+              <%= link_to "View Form", validation_fine_path(fine), class:"btn btn-outline-dark" %>
+            </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
 
-  <h1 class="cardtitle text-light">General form</h1>
-    <div class="allcarregistrations">
-      <%  @general_questions.each do |generalquestion| %>
-        <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
-          <div class="card-body text-dark text-right">
-          <p class="cardtext"> <%= generalquestion.user.first_name %> has a general question </p>
-            <%= link_to "View Form", validation_general_question_path(generalquestion), class:"btn btn-outline-dark" %>
+    <h1 class="cardtitle text-light">General form</h1>
+      <div class="allcarregistrations">
+        <%  @general_questions.each do |generalquestion| %>
+          <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
+            <div class="card-body text-dark text-right">
+            <p class="cardtext"> <%= generalquestion.user.first_name %> has a general question </p>
+              <%= link_to "View Form", validation_general_question_path(generalquestion), class:"btn btn-outline-dark" %>
+            </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
 </div>
