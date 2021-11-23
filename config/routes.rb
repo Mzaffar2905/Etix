@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'registration_successful', to: 'pages#registration_successful'
   resources :car_registrations do
     member do
+      get 'validation'
       patch 'validate'
       patch 'reject'
     end
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get 'declaration_successful', to: 'pages#declaration_successful'
   resources :declarations do
     member do
+    get 'validation'
     patch 'validate'
     patch 'reject'
     end
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
 
   resources :general_questions do
     member do
+    get 'validation'
     patch 'validate'
     patch 'reject'
     end
@@ -27,6 +30,7 @@ Rails.application.routes.draw do
     get 'fine_successful', to: 'pages#fine_successful'
   resources :fines do
     member do
+    get 'validation'
     patch 'validate'
     patch 'reject'
     end

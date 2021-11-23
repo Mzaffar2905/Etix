@@ -14,7 +14,7 @@ class GeneralQuestionsController < ApplicationController
     @general_question.update(generalquestion_params)
   end
 
-  def show
+  def validation
     @general_question = GeneralQuestion.find(params[:id])
   end
 

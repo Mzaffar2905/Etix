@@ -18,7 +18,7 @@ class CarRegistrationsController < ApplicationController
  end
 
 
-  def show
+  def validation
     @car_registration = CarRegistration.find(params[:id])
   end
 

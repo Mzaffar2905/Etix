@@ -20,7 +20,7 @@ class FinesController < ApplicationController
     @fine = Fine.new
   end
 
-  def show
+  def validation
     @fine = Fine.find(params[:id])
   end
 
