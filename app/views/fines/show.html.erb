@@ -1,14 +1,14 @@
-<% if @declaration.declaration_approved == "Validate" %>
+<% if @fine.fine_approved == "Validate" %>
 <div class="container">
   <div class="card text-white bg-dark mb-4">
     <div class="card-body">
       <h1>Client</h1>
-      <p class="card-text border-bottom border-success"><strong>Declaration</strong> </p>
+      <p class="card-text border-bottom border-success"><strong>Fine</strong> </p>
       <p class="card-text"><strong>First name:</strong> <%= @user.first_name %> </p>
       <p class="card-text"><strong>Last name:</strong> <%= @user.last_name %> </p>
     </div>
     <div class="card-body">
-      <p class="card-text border-bottom border-success"><strong>Your request  <%= @declaration.request_number %> has been validated! </strong> </p>
+      <p class="card-text border-bottom border-success"><strong>Your request  <%= @fine.request_number %> has been validated! </strong> </p>
       <p>Please find below QR code to scan or you can pay the amount on the following account number: 00059856345.</p>
     </div>
       <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
@@ -25,15 +25,15 @@
   <div class="card text-white bg-dark mb-4">
     <div class="card-body">
       <h1>Client</h1>
-      <p class="card-text border-bottom border-success"><strong>Declaration</strong> </p>
+      <p class="card-text border-bottom border-success"><strong>Fine</strong> </p>
       <p class="card-text"><strong>First name:</strong> <%= @user.first_name %> </p>
       <p class="card-text"><strong>Last name:</strong> <%= @user.last_name %> </p>
     </div>
     <div class="card-body">
-      <p class="card-text border-bottom border-success"><strong>Your request  <%= @declaration.request_number %> has been rejected. </strong> </p>
+      <p class="card-text border-bottom border-success"><strong>Your request  <%= @fine.request_number %> has been rejected. </strong> </p>
       <p>Please fill another form with the correct informations.</p>
       <p>Thank you, if you have any issues please contact us on: +230 57807059</p>
-       <%= link_to "Declaration Form", new_declaration_path, class:"btn btn-outline-warning"%>
+       <%= link_to "Declaration Form", new_fine_path, class:"btn btn-outline-warning"%>
     </div>
   </div>
 </div>

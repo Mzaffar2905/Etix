@@ -20,6 +20,11 @@ class FinesController < ApplicationController
     @fine = Fine.new
   end
 
+  def show
+    @fine = Fine.find(params[:id])
+    @user = current_user
+  end
+
   def validation
     @fine = Fine.find(params[:id])
   end
