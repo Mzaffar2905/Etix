@@ -3,99 +3,102 @@
 	<p class="card-text"><strong>First name:</strong> <%= @user.first_name %> </p>
 	<p class="card-text"><strong>Last name:</strong> <%= @user.last_name %> </p>
 
-
+<% if @car_registrations_pending != [] %>
 <p class="card-text border-bottom border-primary"><strong>Pending Car Registrations</strong></p>
 	<% @car_registrations_pending.each do |f| %>
-	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
 	<% end %>
-    <% end %>
+<% end %>
 
+<% if @declarations_pending != [] %>
 <p class="card-text border-bottom border-primary"><strong>Pending Declarations</strong></p>
-	<%  @declarations_pending.each do |f| %>
-	<% if f.car_registration.user_id == current_user.id %>
+	<% @declarations_pending.each do |f| %>
 	<p>Request number: <%= f.request_number %></p>
 	<% end %>
-	<% end %>
+<% end %>
 
+<% if @fines_pending != [] %>
 <p class="card-text border-bottom border-primary"><strong>Pending Fines</strong></p>
 	<% @fines_pending.each do |f| %>
-	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
 	<% end %>
-	<% end %>
+<% end %>
 
+<% if @general_questions_pending != [] %>
 <p class="card-text border-bottom border-primary"><strong>Pending General Questions</strong></p>
 	<% @general_questions_pending.each do |f| %>
-	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
 	<% end %>
-	<% end %>
+<% end %>
+
+<% if @car_registrations_validate != [] %>
+  <p class="card-text border-bottom border-success"><strong>Validated Car Registrations</strong></p>
+    <% @car_registrations_validate.each do |f| %>
+    <p>Request number: <%= f.request_number %></p>
+    <%= link_to "View Details", car_registration_path(f), class:"btn btn-outline-dark"%>
+    <% end %>
+<% end %>
 
 
-<p class="card-text border-bottom border-success"><strong>Validated Car Registrations</strong></p>
-	<% @car_registrations_validate.each do |f| %>
-	<% if f.user_id == current_user.id %>
-	<p>Request number: <%= f.request_number %></p>
-  <%= link_to "View Details", car_registration_path(f), class:"btn btn-outline-dark"%>
-	<% end %>
-	<% end %>
-
+<% if @declarations_validate != [] %>
 <p class="card-text border-bottom border-success"><strong>Validated Declarations</strong></p>
 	<% @declarations_validate.each do |f| %>
-	<% if f.car_registration.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
   <%= link_to "View Details", declaration_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
-	<% end %>
+<% end %>
 
+
+<% if @fines_validate != [] %>
 <p class="card-text border-bottom border-success"><strong>Validated Fines</strong></p>
 	<% @fines_validate.each do |f| %>
-	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
   <%= link_to "View Details", fine_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
-	<% end %>
+<% end %>
 
+
+<% if @general_questions_validate != [] %>
 <p class="card-text border-bottom border-success"><strong>Validated General Question</strong></p>
 	<% @general_questions_validate.each do |f| %>
-	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
   <%= link_to "View Details", general_question_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
-	<% end %>
+<% end %>
 
 
+<% if @car_registrations_reject != [] %>
 <p class="card-text border-bottom border-danger"><strong>Rejected Car Registrations</strong></p>
 	<% @car_registrations_reject.each do |f| %>
-	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
   <%= link_to "View Details", car_registration_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
-	<% end %>
+<% end %>
 
+
+<% if @declarations_reject != [] %>
 <p class="card-text border-bottom border-danger"><strong>Rejected Car Declarations</strong></p>
 	<% @declarations_reject.each do |f| %>
-	<% if f.car_registration.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
   <%= link_to "View Details", declaration_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
-	<% end %>
+<% end %>
 
+
+<% if @fines_reject != [] %>
 <p class="card-text border-bottom border-danger"><strong>Rejected Fines</strong></p>
 	<% @fines_reject.each do |f| %>
-	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
   <%= link_to "View Details", fine_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
-	<% end %>
+<% end %>
 
+
+<% if @general_questions_reject != [] %>
 <p class="card-text border-bottom border-danger"><strong>Rejected General Questions</strong></p>
 	<% @general_questions_reject.each do |f| %>
-	<% if f.user_id == current_user.id %>
 	<p>Request number: <%= f.request_number %></p>
   <%= link_to "View Details", general_question_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
-	<% end %>
-
+<% end %>
 </div>
