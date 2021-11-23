@@ -20,7 +20,7 @@ class DeclarationsController < ApplicationController
     @declaration.car_registration = @car_registration
   end
 
-  def show
+  def validation
     @declaration = Declaration.find(params[:id])
   end
 
