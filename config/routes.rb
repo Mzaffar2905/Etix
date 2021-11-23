@@ -12,27 +12,27 @@ Rails.application.routes.draw do
   get 'declaration_successful', to: 'pages#declaration_successful'
   resources :declarations do
     member do
-    get 'validation'
-    patch 'validate'
-    patch 'reject'
+      get 'validation'
+      patch 'validate'
+      patch 'reject'
     end
   end
   get 'generalquery_successful', to: 'pages#generalquery_successful'
 
   resources :general_questions do
     member do
-    get 'validation'
-    patch 'validate'
-    patch 'reject'
+      get 'validation'
+      patch 'validate'
+      patch 'reject'
     end
   end
 
-    get 'fine_successful', to: 'pages#fine_successful'
+  get 'fine_successful', to: 'pages#fine_successful'
   resources :fines do
     member do
-    get 'validation'
-    patch 'validate'
-    patch 'reject'
+      get 'validation'
+      patch 'validate'
+      patch 'reject'
     end
   end
   get 'legislation', to: 'pages#legislation'
