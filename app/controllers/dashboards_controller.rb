@@ -25,20 +25,21 @@ class DashboardsController < ApplicationController
   def dashboard_list_form
     @user = current_user
     if !@user.is_analyst?
-      @car_registrations_validate = CarRegistration.where(registration_approved: "Validate")
-      @declarations_validate = Declaration.where declaration_approved: "Validate"
-      @fines_validate = Fine.where fine_approved: "Validate"
-      @general_questions_validate = GeneralQuestion.where question_approved: "Validate"
+      @car_registrations_validate = CarRegistration.where(registration_approved: "Validate", user: current_user)
+      @declarations_validate = Declaration.joins(:car_registration).where("declarations.declaration_approved = ? AND car_registrations.user_id = ?", "Validate", current_user.id)
+      @fines_validate = Fine.where(fine_approved: "Validate", user: current_user)
+      @general_questions_validate = GeneralQuestion.where(question_approved: "Validate", user: current_user)
 
-      @car_registrations_pending = CarRegistration.where registration_approved: "pending"
-      @declarations_pending = Declaration.where declaration_approved: "pending"
-      @fines_pending = Fine.where fine_approved: "pending"
-      @general_questions_pending = GeneralQuestion.where question_approved: "pending"
 
-      @car_registrations_reject = CarRegistration.where registration_approved: "Rejected"
-      @declarations_reject = Declaration.where declaration_approved: "Rejected"
-      @fines_reject = Fine.where fine_approved: "Rejected"
-      @general_questions_reject = GeneralQuestion.where question_approved: "Rejected"
+      @car_registrations_pending = CarRegistration.where(registration_approved: "pending", user: current_user)
+      @declarations_pending = Declaration.joins(:car_registration).where("declarations.declaration_approved = ? AND car_registrations.user_id = ?", "pending", current_user.id)
+      @fines_pending = Fine.where(fine_approved: "pending", user: current_user)
+      @general_questions_pending = GeneralQuestion.where(question_approved: "pending", user: current_user)
+
+      @car_registrations_reject = CarRegistration.where(registration_approved: "Rejected", user: current_user)
+      @declarations_reject = Declaration.joins(:car_registration).where("declarations.declaration_approved = ? AND car_registrations.user_id = ?", "Rejected", current_user.id)
+      @fines_reject = Fine.where(fine_approved: "Rejected", user: current_user)
+      @general_questions_reject = GeneralQuestion.where(question_approved: "Rejected", user: current_user)
     end
   end
 end
