@@ -13,6 +13,11 @@ class DeclarationsController < ApplicationController
     @declaration.update(declaration_params)
   end
 
+  def show
+    @declaration = Declaration.find(params[:id])
+    @user = current_user
+  end
+
   def new
     @user = current_user
     @declaration = Declaration.new

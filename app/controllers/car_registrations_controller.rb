@@ -27,6 +27,11 @@ class CarRegistrationsController < ApplicationController
     @user = current_user
   end
 
+  def show
+    @car_registration = CarRegistration.find(params[:id])
+    @user = current_user
+  end
+
   def create
     @car_registration = CarRegistration.new(car_registration_params)
     @car_registration.user = current_user
