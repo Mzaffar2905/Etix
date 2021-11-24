@@ -19,15 +19,18 @@
   }
 
   .footer-links a {
-    color: #023e8a;
+    color: #fdfdfd;
     opacity: 15;
     text-decoration: none;
     font-size: 30px;
     padding: 0px 10px;
+    transition: all 200ms ease-in-out;
+    opacity: .7;
   }
 
   .footer-links a:hover {
-    color: red;
+    color: #01b6c9;
+    opacity: 1;
   }
 
   .footer-copyright{
@@ -41,12 +44,13 @@
     min-height: 85vh;
     display: flex;
     align-items: center;
+    flex-grow: 1;
     
   }
   
   .banner h1 {
     margin: 0;
-    color: white;
+    color: rgb(255, 255, 255);
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     font-size: 32px;
     font-weight: bold;
@@ -59,6 +63,7 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
   
-  .vilor{
+  .home{
     margin-left: 20vw;
+  
   }
