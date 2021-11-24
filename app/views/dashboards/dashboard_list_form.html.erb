@@ -1,28 +1,43 @@
-<div class="card-body">
-	<p class="card-text border-bottom border-dark"><strong>Details</strong></p>
-	<p class="card-text"><strong>First name:</strong> <%= @user.first_name %> </p>
-	<p class="card-text"><strong>Last name:</strong> <%= @user.last_name %> </p>
+	<p class="card-text display"><strong>Welcome</strong> <%= @user.first_name %> </p>
 
-<% if @car_registrations_pending != [] %>
-<p class="card-text border-bottom border-primary"><strong>Pending Car Registrations</strong></p>
-	<% @car_registrations_pending.each do |f| %>
-	<p>Request number: <%= f.request_number %></p>
-	<% end %>
-<% end %>
 
-<% if @declarations_pending != [] %>
-<p class="card-text border-bottom border-primary"><strong>Pending Declarations</strong></p>
-	<% @declarations_pending.each do |f| %>
-	<p>Request number: <%= f.request_number %></p>
-	<% end %>
-<% end %>
+  <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-body text-white bg-dark">
+       <% if @car_registrations_pending != [] %>
+          <p class="card-text border-bottom border-warning"><strong>Pending Car Registrations</strong></p>
+        	<% @car_registrations_pending.each do |f| %>
+            <p class="card-text">	<p>Request number: <%= f.request_number %></p>
+	        <% end %>
+        <% end %>
+     <div class="card-footer bg-transparent border-warning">Your request is being proceed..<i class="fas fa-sync fa-spin"></i> </div>
+   </div>
+ </div>
 
-<% if @fines_pending != [] %>
-<p class="card-text border-bottom border-primary"><strong>Pending Fines</strong></p>
-	<% @fines_pending.each do |f| %>
-	<p>Request number: <%= f.request_number %></p>
-	<% end %>
-<% end %>
+  <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-body text-white bg-dark">
+      <p class="card-text border-bottom border-warning"><strong>Pending Declarations</strong></p>
+      <% if @declarations_pending != [] %>
+        <% @declarations_pending.each do |f| %>
+          <p class="card-text"><p>Request number: <%= f.request_number %></p></p>
+        <% end %>
+      <% end %>
+      <div class="card-footer bg-transparent border-warning">Your request is being proceed..<i class="fas fa-sync fa-spin"></i> </div>
+    </div>
+  </div>
+
+  <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-body text-white bg-dark">
+      <p class="card-text border-bottom border-warning"><strong>Pending Fines</strong></p>
+      <% if @fines_pending != [] %>
+        <% @fines_pending.each do |f| %>
+         <p class="card-text">Request number: <%= f.request_number %></p>
+        <% end %>
+      <% end %>
+     <div class="card-footer bg-transparent border-warning">Your request is being proceed..<i class="fas fa-sync fa-spin"></i> </div>
+   </div>
+ </div>
+
+
 
 <% if @general_questions_pending != [] %>
 <p class="card-text border-bottom border-primary"><strong>Pending General Questions</strong></p>
@@ -101,4 +116,3 @@
     <%= link_to "View Details", general_question_path(f), class:"btn btn-outline-dark"%>
 	<% end %>
 <% end %>
-</div>
