@@ -22,4 +22,9 @@
 .background {
   background-image: url('https://wallpaper.dog/large/10850082.jpg');
   flex-grow: 1;
+  
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
