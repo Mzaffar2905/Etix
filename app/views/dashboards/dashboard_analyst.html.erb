@@ -4,7 +4,7 @@
         <% @car_registrations.each do |carregistration| %>
           <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
             <div class="card-body text-dark text-right">
-            <p class="cardtext" ><%= carregistration.user.first_name %> wants to register his car </p>
+            <p class="cardtext" ><%= carregistration.user.first_name %> wants to register a car </p>
               <%= link_to "View Form", validation_car_registration_path(carregistration), class:"btn btn-outline-primary btn-blue" %>
             </div>
           </div>
@@ -16,7 +16,7 @@
         <% @declarations.each do |declaration| %>
           <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
             <div class="card-body text-dark text-right">
-              <p class="cardtext"> <%= declaration.car_registration.user.first_name %> wants to declare his car</p>
+              <p class="cardtext"> <%= declaration.car_registration.user.first_name %> wants to declare a car</p>
               <%= link_to "View Form",  validation_declaration_path(declaration), class:"btn btn-outline-primary btn-blue" %>
             </div>
           </div>
