@@ -40,6 +40,8 @@ class DashboardsController < ApplicationController
       @declarations_reject = Declaration.joins(:car_registration).where("declarations.declaration_approved = ? AND car_registrations.user_id = ?", "Rejected", current_user.id)
       @fines_reject = Fine.where(fine_approved: "Rejected", user: current_user)
       @general_questions_reject = GeneralQuestion.where(question_approved: "Rejected", user: current_user)
+    else
+      redirect_to root_path
     end
   end
 end
