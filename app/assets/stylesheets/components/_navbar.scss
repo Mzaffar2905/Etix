@@ -1,9 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color:white ;
+background-color: #74EBD5;
+background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+
 
   h2 {
-    font-style: italic;
+    font-style: initial;
     font-weight: bold;
     font-size: 50px;
     color: rgba($color: rgb(35, 171, 206), $alpha: 1.0);
