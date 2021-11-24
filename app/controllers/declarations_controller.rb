@@ -22,8 +22,8 @@ class DeclarationsController < ApplicationController
     @user = current_user
     @declaration = Declaration.new
     @car_registration = CarRegistration.find_by(user_id: @user)
-    @car_registrations = CarRegistration.where(user: current_user)
     @declaration.car_registration = @car_registration
+    @car_registrations = CarRegistration.where(user: current_user)
   end
 
   def validation
@@ -37,6 +37,7 @@ class DeclarationsController < ApplicationController
 
   def create
     @declaration = Declaration.new(declaration_params)
+    @car_registrations = CarRegistration.where(user: current_user)
     @request_number = set_random_number
     @declaration.request_number = @request_number
     if @declaration.save
@@ -66,4 +67,3 @@ class DeclarationsController < ApplicationController
     params.require(:declaration).permit(:cof_number, :car_registration, :car_registration_id, :policy_insurance_number, :expiry_date, :declaration_approved, :payment_done?)
   end
 end
-
