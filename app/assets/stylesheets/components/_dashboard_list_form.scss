@@ -27,4 +27,16 @@
   align-self: center;
   padding: 7px;
   margin-bottom: 20px;
+  transition: 90s;
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(
+-90deg);
+}
+100% {
+    transform: rotate(
+45deg);
+}
 }
