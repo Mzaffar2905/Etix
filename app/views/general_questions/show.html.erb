@@ -9,11 +9,13 @@
     </div>
     <div class="card-body">
       <p class="card-text border-bottom border-success"><strong>Your request  <%= @general_question.request_number %> has been validated! </strong> </p>
-      <p>Please note that your question has been validated, we will call you in 5 min.</p>
+      <p> <%= @general_question.answer %> </p>
     </div>
     <%= link_to "Home", root_path, class:"btn90 fa fa-home rounded"%>
   </div>
 </div>
+
+
 <% else %>
 <div class="container">
   <div class="card text-white bg-dark mb-4 mt-4">
@@ -27,7 +29,7 @@
       <p class="card-text border-bottom border-danger"><strong>Your request  <%= @general_question.request_number %> has been rejected. </strong> </p>
       <p>Please note that your question is invalid, reformulate your question by filling the form below:</p>
       <p>Thank you, if you have any issues please contact us on: +230 57807059.</p>
-       <%= link_to "General Question Form", new_general_question_path, class:"btn btn-outline-light"%>
+      <%= link_to "General Question Form", new_general_question_path, class:"btn btn-outline-light"%>
     </div>
   </div>
 </div>

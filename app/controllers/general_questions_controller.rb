@@ -1,6 +1,4 @@
-
 class GeneralQuestionsController < ApplicationController
-
   def index
     @general_questions = GeneralQuestion.all
   end
@@ -12,6 +10,10 @@ class GeneralQuestionsController < ApplicationController
   def update
     @general_question = GeneralQuestion.find(params[:id])
     @general_question.update(generalquestion_params)
+    @general_question = GeneralQuestion.find(params[:id])
+    @general_question.question_approved = "Validate"
+    @general_question.save!
+    redirect_to dashboard_analyst_path
   end
 
   def validation
@@ -32,10 +34,10 @@ class GeneralQuestionsController < ApplicationController
   end
 
   def create
-      @general_question = GeneralQuestion.new(generalquestion_params)
-      @request_number = set_random_number
-      @general_question.request_number = @request_number
-      @general_question.user = current_user
+    @general_question = GeneralQuestion.new(generalquestion_params)
+    @request_number = set_random_number
+    @general_question.request_number = @request_number
+    @general_question.user = current_user
     if @general_question.save
       redirect_to generalquery_successful_path
     else
@@ -43,12 +45,8 @@ class GeneralQuestionsController < ApplicationController
     end
   end
 
-  def validate
-    @general_question = GeneralQuestion.find(params[:id])
-    @general_question.question_approved = "Validate"
-    @general_question.save!
-    redirect_to dashboard_analyst_path
-  end
+  # def validate
+  # end
 
   def reject
     @general_question = GeneralQuestion.find(params[:id])
@@ -57,9 +55,9 @@ class GeneralQuestionsController < ApplicationController
     redirect_to dashboard_analyst_path
   end
 
-   private
+  private
 
   def generalquestion_params
-    params.require(:general_question).permit(:issue)
+    params.require(:general_question).permit(:issue, :answer)
   end
 end
