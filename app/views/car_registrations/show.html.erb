@@ -27,15 +27,15 @@
   <div class="card text-white bg-dark mb-4 mt-4">
     <div class="card-body">
       <h1>Client</h1>
-      <p class="card-text border-bottom border-success"><strong>Car Registration</strong> </p>
+      <p class="card-text border-bottom border-danger"><strong>Car Registration</strong> </p>
       <p class="card-text"><strong>First name:</strong> <%= @user.first_name %> </p>
       <p class="card-text"><strong>Last name:</strong> <%= @user.last_name %> </p>
     </div>
     <div class="card-body">
-      <p class="card-text border-bottom border-success"><strong>Your request  <%= @car_registration.request_number %> has been rejected. </strong> </p>
+      <p class="card-text border-bottom border-danger"><strong>Your request  <%= @car_registration.request_number %> has been rejected. </strong> </p>
       <p>Please fill another form with the correct informations.</p>
       <p>Thank you, if you have any issues please contact us on: +230 57807059</p>
-       <%= link_to "Car Registration Form", new_car_registration_path, class:"btn btn-outline-warning"%>
+       <%= link_to "Car Registration Form", new_car_registration_path, class:"btn btn-outline-light"%>
     </div>
   </div>
 </div>
