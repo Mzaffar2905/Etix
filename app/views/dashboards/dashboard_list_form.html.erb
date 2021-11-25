@@ -14,11 +14,11 @@
   <% if @car_registrations_pending.any? %>
     <div class="mb-3" style="width: 18rem;">
       <div class="card-body text-white bg-dark">
-        <p class="card-text border-bottom border-warning"><strong>Pending Car Registrations</strong></p>
+        <p class="card-text border-bottom border-primary"><strong>Pending Car Registrations</strong></p>
         	<% @car_registrations_pending.each do |f| %>
             <p class="card-text">	<p>Request number: <%= f.request_number %></p>
 	        <% end %>
-        <div class="card-footer bg-transparent border-warning">Your request is being proceed..<i class="fas fa-sync fa-spin"></i> </div>
+        <div class="card-footer bg-transparent border-primary">Your request is being processed..<i class="fas fa-sync fa-spin"></i> </div>
      </div>
    </div>
   <% end %>
@@ -26,11 +26,11 @@
   <% if @declarations_pending.any? %>
     <div class="mb-3" style="width: 18rem;">
       <div class="card-body text-white bg-dark">
-        <p class="card-text border-bottom border-warning"><strong>Pending Declarations</strong></p>
+        <p class="card-text border-bottom border-primary"><strong>Pending Declarations</strong></p>
           <% @declarations_pending.each do |f| %>
             <p class="card-text"><p>Request number: <%= f.request_number %></p></p>
           <% end %>
-        <div class="card-footer bg-transparent border-warning">Your request is being proceed..<i class="fas fa-sync fa-spin"></i> </div>
+        <div class="card-footer bg-transparent border-primary">Your request is being processed..<i class="fas fa-sync fa-spin"></i> </div>
      </div>
    </div>
   <% end %>
@@ -38,11 +38,11 @@
   <% if @fines_pending.any? %>
       <div class="mb-3" style="width: 18rem;">
         <div class="card-body text-white bg-dark">
-          <p class="card-text border-bottom border-warning"><strong>Pending Fines</strong></p>
+          <p class="card-text border-bottom border-primary"><strong>Pending Fines</strong></p>
             <% @fines_pending.each do |f| %>
             <p class="card-text">Request number: <%= f.request_number %></p>
             <% end %>
-        <div class="card-footer bg-transparent border-warning">Your request is being proceed..<i class="fas fa-sync fa-spin"></i> </div>
+        <div class="card-footer bg-transparent border-primary">Your request is being processed..<i class="fas fa-sync fa-spin"></i> </div>
       </div>
     </div>
   <% end %>
@@ -52,11 +52,11 @@
   <% if @general_questions_pending.any? %>
     <div class="mb-3" style="width: 18rem;">
       <div class="card-body text-white bg-dark">
-        <p class="card-text border-bottom border-warning"><strong>Pending General Questions</strong></p>
+        <p class="card-text border-bottom border-primary"><strong>Pending General Questions</strong></p>
 	        <% @general_questions_pending.each do |f| %>
 	        <p>Request number: <%= f.request_number %></p>
           <% end %>
-        <div class="card-footer bg-transparent border-warning">Your request is being proceed..<i class="fas fa-sync fa-spin"></i> </div>
+        <div class="card-footer bg-transparent border-primary">Your request is being processed..<i class="fas fa-sync fa-spin"></i> </div>
       </div>
     </div>
   <% end %>
@@ -66,11 +66,11 @@
 <div class="d-flex justify-content-around ml-3 mr-3">
   <% if @car_registrations_validate.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body55 p-4">
-        <p class="card-text border-bottom border-dark"><strong>Validated Car Registrations</strong></p>
+      <div class="card-body text-white bg-dark p-4 ">
+        <p class="card-text border-bottom border-success"><strong>Validated Car Registrations</strong></p>
         <% @car_registrations_validate.each do |f| %>
           <p>Request number: <%= f.request_number %></p>
-          <%= link_to "View Details", car_registration_path(f), class:"btn btn-warning btn-sm btn-blue"%>
+          <%= link_to "View Details", car_registration_path(f), class:"btn btn-success btn-sm btn-blue"%>
           <hr class="hr1">
         <% end %>
       </div>
@@ -80,11 +80,11 @@
 
   <% if @declarations_validate.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body55 p-4">
-        <p class="card-text border-bottom border-dark"><strong>Validated Declarations</strong></p>
+      <div class="card-body text-white bg-dark p-4">
+        <p class="card-text border-bottom border-success"><strong>Validated Declarations</strong></p>
       	<% @declarations_validate.each do |f| %>
 	        <p>Request number: <%= f.request_number %></p>
-          <%= link_to "View Details", declaration_path(f), class:"btn btn-warning btn-sm btn-blue"%>
+          <%= link_to "View Details", declaration_path(f), class:"btn btn-success btn-sm btn-blue"%>
           <hr class="hr1">
 	      <% end %>
       </div>
@@ -94,11 +94,11 @@
 
   <% if @fines_validate.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body55 p-4">
-        <p class="card-text border-bottom border-dark"><strong>Validated Fines</strong></p>
+      <div class="card-body text-white bg-dark p-4">
+        <p class="card-text border-bottom border-success"><strong>Validated Fines</strong></p>
 	      <% @fines_validate.each do |f| %>
 	        <p>Request number: <%= f.request_number %></p>
-          <%= link_to "View Details", fine_path(f), class:"btn btn-warning btn-sm btn-blue"%>
+          <%= link_to "View Details", fine_path(f), class:"btn btn-success btn-sm btn-blue"%>
           <hr class="hr1">
 	      <% end %>
       </div>
@@ -108,11 +108,11 @@
 
   <% if @general_questions_validate.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body55 p-4">
-        <p class="card-text border-bottom border-dark"><strong>Validated General Questions</strong></p>
+      <div class="card-body text-white bg-dark p-4">
+        <p class="card-text border-bottom border-success"><strong>Validated General Questions</strong></p>
 	      <% @general_questions_validate.each do |f| %>
 	        <p>Request number: <%= f.request_number %></p>
-          <%= link_to "View Details", general_question_path(f), class:"btn btn-warning btn-sm btn-bluer"%>
+          <%= link_to "View Details", general_question_path(f), class:"btn btn-success btn-sm btn-blue"%>
           <hr class="hr1">
 	      <% end %>
       </div>
@@ -124,11 +124,11 @@
 <div class="d-flex justify-content-around ml-3 mr-3">
   <% if @car_registrations_reject.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body88 text-white p-4">
-        <p class="card-text-white border-bottom border-dark"><strong>Rejected Car Registrations</strong></p>
+      <div class="card-body text-white bg-dark  p-4">
+        <p class="card-text-white border-bottom border-danger"><strong>Rejected Car Registrations</strong></p>
         <% @car_registrations_reject.each do |f| %>
           <p>Request number: <%= f.request_number %></p>
-          <%= link_to "View Details", car_registration_path(f), class:"btn btn-warning btn-sm btn-blue"%>
+          <%= link_to "View Details", car_registration_path(f), class:"btn btn-danger btn-sm btn-blue"%>
           <hr class="hr1">
 	      <% end %>
       </div>
@@ -138,11 +138,11 @@
 
 <% if @declarations_reject.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body88 text-white p-4">
-        <p class="card-text-white border-bottom border-dark"><strong>Rejected Car Declarations</strong></p>
+      <div class="card-body text-white bg-dark p-4">
+        <p class="card-text-white border-bottom border-danger"><strong>Rejected Car Declarations</strong></p>
 	      <% @declarations_reject.each do |f| %>
 	        <p>Request number: <%= f.request_number %></p>
-          <%= link_to "View Details", declaration_path(f), class:"btn btn-warning btn-sm btn-blue"%>
+          <%= link_to "View Details", declaration_path(f), class:"btn btn-danger btn-sm btn-blue"%>
           <hr class="hr1">
 	      <% end %>
       </div>
@@ -152,11 +152,11 @@
 
 <% if @fines_reject.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body88 text-white p-4">
-        <p class="card-text-white border-bottom border-dark"><strong>Rejected Fines</strong></p>
+      <div class="card-body text-white bg-dark p-4">
+        <p class="card-text-white border-bottom border-danger"><strong>Rejected Fines</strong></p>
         <% @fines_reject.each do |f| %>
           <p>Request number: <%= f.request_number %></p>
-          <%= link_to "View Details", fine_path(f), class:"btn btn-warning btn-sm btn-blue"%>
+          <%= link_to "View Details", fine_path(f), class:"btn btn-danger btn-sm btn-blue"%>
           <hr class="hr1">
         <% end %>
       </div>
@@ -166,11 +166,11 @@
 
 <% if @general_questions_reject.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body88 text-white p-4">
-        <p class="card-text-white border-bottom border-dark"><strong>Rejected General Questions</strong></p>
+      <div class="card-body text-white bg-dark p-4">
+        <p class="card-text-white border-bottom border-danger"><strong>Rejected General Questions</strong></p>
         <% @general_questions_reject.each do |f| %>
           <p>Request number: <%= f.request_number %></p>
-          <%= link_to "View Details", general_question_path(f), class:"btn btn-warning btn-sm btn-blue"%>
+          <%= link_to "View Details", general_question_path(f), class:"btn btn-danger btn-sm btn-blue"%>
           <hr class="hr1">
         <% end %>
       </div>
