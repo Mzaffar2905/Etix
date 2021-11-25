@@ -10,8 +10,11 @@ class GeneralQuestionsController < ApplicationController
   def update
     @general_question = GeneralQuestion.find(params[:id])
     @general_question.update(generalquestion_params)
-    @general_question = GeneralQuestion.find(params[:id])
-    @general_question.question_approved = "Validate"
+    if params[:reject_general_question]
+      @general_question.question_approved = "Rejected"
+    else
+      @general_question.question_approved = "Validate"
+    end
     @general_question.save!
     redirect_to dashboard_analyst_path
   end
@@ -47,13 +50,6 @@ class GeneralQuestionsController < ApplicationController
 
   # def validate
   # end
-
-  def reject
-    @general_question = GeneralQuestion.find(params[:id])
-    @general_question.question_approved = "Rejected"
-    @general_question.save!
-    redirect_to dashboard_analyst_path
-  end
 
   private
 

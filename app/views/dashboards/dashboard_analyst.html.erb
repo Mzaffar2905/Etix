@@ -1,7 +1,7 @@
 <div class="background">
     <h1 class="cardtitle text-light">Car Registration Pending: <%= @car_registrations.count %></h1>
       <div class="allcarregistrations">
-        <% @car_registrations.each do |carregistration| %>
+        <% @car_registrations.reverse.each do |carregistration| %>
           <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
             <div class="card-body text-dark text-right">
             <p class="cardtext" ><%= carregistration.user.first_name %> wants to register a car </p>
@@ -13,7 +13,7 @@
 
     <h1 class="cardtitle text-light">Declaration form Pending: <%= @declarations.count %> </h1>
       <div class="allcarregistrations">
-        <% @declarations.each do |declaration| %>
+        <% @declarations.reverse.each do |declaration| %>
           <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
             <div class="card-body text-dark text-right">
               <p class="cardtext"> <%= declaration.car_registration.user.first_name %> wants to declare a car</p>
@@ -25,7 +25,7 @@
 
     <h1 class="cardtitle text-light">Fines Form Pending: <%= @fines.count %> </h1>
       <div class="allcarregistrations">
-        <% @fines.each do |fine| %>
+        <% @fines.reverse.each do |fine| %>
           <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
             <div class="card-body text-dark text-right">
               <p class="cardtext"> <%= fine.user.first_name %> wants pay his fine </p>
@@ -37,7 +37,7 @@
 
     <h1 class="cardtitle text-light">General form Pending: <%=  @general_questions.count %></h1>
       <div class="allcarregistrations">
-        <%  @general_questions.each do |generalquestion| %>
+        <%  @general_questions.reverse.each do |generalquestion| %>
           <div class="card border-dark mx-auto mb-3" style="max-width: 80rem;">
             <div class="card-body text-dark text-right">
             <p class="cardtext"> <%= generalquestion.user.first_name %> has a general question </p>
