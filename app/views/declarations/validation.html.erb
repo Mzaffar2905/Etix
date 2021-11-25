@@ -13,7 +13,6 @@
       <p class="card-text"><strong>Policy Insurance Number:</strong> <%= @declaration.policy_insurance_number %> </p>
     </div>
   </div>
-
   <div class="card text-white bg-dark mb-4">
     <div class="card-body">
       <%= link_to "Validate", validate_declaration_path(@declaration), method: "patch", class:"btn btn-success btn-sm btn-blue" %>
