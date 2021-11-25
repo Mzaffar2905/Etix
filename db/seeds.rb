@@ -33,7 +33,7 @@ porsche=CarRegistration.create(car_make:"porsche", car_model:"cayman", chassis_n
 
 
 
-Declaration.create(car_registration:toyota, expiry_date:"4/4/21", cof_number:"782387", policy_insurance_number:"C987H4", declaration_approved:"pending", request_number:"54360")
+
 Declaration.create(car_registration:nissan, expiry_date:"2/4/21", cof_number:"983462", policy_insurance_number:"A986J3", declaration_approved:"pending", request_number:"12347")
 Declaration.create(car_registration:honda, expiry_date:"9/5/21", cof_number:"894579", policy_insurance_number:"B643E1", declaration_approved:"pending", request_number:"34568")
 Declaration.create(car_registration:suzuki, expiry_date:"13/7/21", cof_number:"405976", policy_insurance_number:"D542K4", declaration_approved:"pending", request_number:"78900")
