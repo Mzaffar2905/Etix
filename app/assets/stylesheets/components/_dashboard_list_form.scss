@@ -67,3 +67,48 @@
     transform: translate3d(4px, 0, 0);
   }
 }
+
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+
+.row {
+  margin: 0 -5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.cardxx {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  background-color: #01b6c9;
+  color: white;
+}
+
+.fa {
+  font-size:50px;
+}
+
+.cardxx h4, p {
+  color: white;
+}
