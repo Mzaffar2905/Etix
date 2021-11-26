@@ -9,10 +9,44 @@
           <% if current_user.is_analyst? %>
             <%= link_to "View my Dashboard", dashboard_analyst_path, class:"btn btn-success btn-lg btn-blue"%>
           <% else %>
-          <%= link_to "Submit form", dashboard_user_path, class:"btn btn-success btn-lg btn-blue"%>
+          <%= link_to "Submit form", dashboard_user_path, class:"btn btn-xx btn-lg btn-blue"%>
           <% end %>
         <% else %>
           <%= link_to "Login", new_user_session_path, class:"btn btn-success btn-lg btn-blue"%>
         <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="cardxx m-3">
+      <p><i class="fas fa-head-side-mask fa-3x"></i></p>
+      <h4>Covid-Safe</h4>
+      <p>100% Online</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="cardxx m-3">
+      <p><i class="fas fa-phone-volume fa-3x"></i></p>
+      <h4>Online Assistance</h4>
+      <p>From Our Analyst </p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="cardxx m-3">
+      <p><i class="fas fa-tachometer-alt fa-3x"></i></p>
+      <h4>Quick And</h4>
+      <p>Reliable Services</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="cardxx m-3">
+      <p><i class="fas fa-hand-holding-usd fa-3x"></i></p>
+      <h4>Support</h4>
+      <p>Online Transactions</p>
+    </div>
   </div>
 </div>

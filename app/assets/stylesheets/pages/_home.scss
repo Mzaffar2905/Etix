@@ -45,6 +45,8 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 
   .banner h1 {
@@ -64,5 +66,14 @@
 
   .home{
     margin-left: 20vw;
-
   }
+
+.btn-xx {
+  color: black;
+  background-color: #01b6c9;
+  border-color: black;
+}
+
+.btnxx:hover {
+  color: opacify($color: #95cfc1, $amount: 0.9)
+}
