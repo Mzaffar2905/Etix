@@ -13,7 +13,7 @@
 <div class="d-flex justify-content-around ml-3 mr-3">
   <% if @car_registrations_pending.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark">
+      <div class="card-body test text-white bg-dark">
         <p class="card-text border-bottom border-primary"><strong>Pending Car Registrations</strong></p>
         	<% @car_registrations_pending.each do |f| %>
             <p class="card-text">	<p>Request number: <%= f.request_number %></p>
@@ -25,7 +25,7 @@
 
   <% if @declarations_pending.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark">
+      <div class="card-body test text-white bg-dark">
         <p class="card-text border-bottom border-primary"><strong>Pending Declarations</strong></p>
           <% @declarations_pending.each do |f| %>
             <p class="card-text"><p>Request number: <%= f.request_number %></p></p>
@@ -37,7 +37,7 @@
 
   <% if @fines_pending.any? %>
       <div class="mb-3" style="width: 18rem;">
-        <div class="card-body text-white bg-dark">
+        <div class="card-body test text-white bg-dark">
           <p class="card-text border-bottom border-primary"><strong>Pending Fines</strong></p>
             <% @fines_pending.each do |f| %>
             <p class="card-text">Request number: <%= f.request_number %></p>
@@ -51,7 +51,7 @@
 
   <% if @general_questions_pending.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark">
+      <div class="card-body test text-white bg-dark">
         <p class="card-text border-bottom border-primary"><strong>Pending General Questions</strong></p>
 	        <% @general_questions_pending.each do |f| %>
 	        <p>Request number: <%= f.request_number %></p>
@@ -66,7 +66,7 @@
 <div class="d-flex justify-content-around ml-3 mr-3">
   <% if @car_registrations_validate.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark p-4 ">
+      <div class="card-body test text-white bg-dark p-4 ">
         <p class="card-text border-bottom border-success"><strong>Validated Car Registrations</strong></p>
         <% @car_registrations_validate.each do |f| %>
           <p>Request number: <%= f.request_number %></p>
@@ -80,7 +80,7 @@
 
   <% if @declarations_validate.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark p-4">
+      <div class="card-body test text-white bg-dark p-4">
         <p class="card-text border-bottom border-success"><strong>Validated Declarations</strong></p>
       	<% @declarations_validate.each do |f| %>
 	        <p>Request number: <%= f.request_number %></p>
@@ -94,7 +94,7 @@
 
   <% if @fines_validate.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark p-4">
+      <div class="card-body test text-white bg-dark p-4">
         <p class="card-text border-bottom border-success"><strong>Validated Fines</strong></p>
 	      <% @fines_validate.each do |f| %>
 	        <p>Request number: <%= f.request_number %></p>
@@ -108,7 +108,7 @@
 
   <% if @general_questions_validate.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark p-4">
+      <div class="card-body test text-white bg-dark p-4">
         <p class="card-text border-bottom border-success"><strong>Validated General Questions</strong></p>
 	      <% @general_questions_validate.each do |f| %>
 	        <p>Request number: <%= f.request_number %></p>
@@ -124,7 +124,7 @@
 <div class="d-flex justify-content-around ml-3 mr-3">
   <% if @car_registrations_reject.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark  p-4">
+      <div class="card-body test text-white bg-dark  p-4">
         <p class="card-text-white border-bottom border-danger"><strong>Rejected Car Registrations</strong></p>
         <% @car_registrations_reject.each do |f| %>
           <p>Request number: <%= f.request_number %></p>
@@ -138,7 +138,7 @@
 
 <% if @declarations_reject.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark p-4">
+      <div class="card-body test text-white bg-dark p-4">
         <p class="card-text-white border-bottom border-danger"><strong>Rejected Car Declarations</strong></p>
 	      <% @declarations_reject.each do |f| %>
 	        <p>Request number: <%= f.request_number %></p>
@@ -152,7 +152,7 @@
 
 <% if @fines_reject.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark p-4">
+      <div class="card-body test text-white bg-dark p-4">
         <p class="card-text-white border-bottom border-danger"><strong>Rejected Fines</strong></p>
         <% @fines_reject.each do |f| %>
           <p>Request number: <%= f.request_number %></p>
@@ -166,7 +166,7 @@
 
 <% if @general_questions_reject.any? %>
     <div class="mb-3" style="width: 18rem;">
-      <div class="card-body text-white bg-dark p-4">
+      <div class="card-body test text-white bg-dark p-4">
         <p class="card-text-white border-bottom border-danger"><strong>Rejected General Questions</strong></p>
         <% @general_questions_reject.each do |f| %>
           <p>Request number: <%= f.request_number %></p>
