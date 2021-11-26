@@ -55,6 +55,15 @@
   }
   }
 
+  .btn-x {
+    color: rgb(255, 254, 254);
+    background-color: #01b6c9;
+    border-color: #01b6c9;
+  }
+  .btn-x:hover {
+    background-color: opacify($color: #01b6c9, $amount: 0.9)
+  }
+
   .card-trip > img {
     height: 200px;
     width: 100%;
