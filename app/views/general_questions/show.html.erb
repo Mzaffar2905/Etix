@@ -27,7 +27,6 @@
     </div>
     <div class="card-body">
       <p class="card-text border-bottom border-danger"><strong>Your request  <%= @general_question.request_number %> has been rejected. </strong> </p>
-      <p>Please note that your question is invalid, reformulate your question by filling the form below:</p>
       <p> <%= @general_question.answer %> </p>
       <%= link_to "General Question Form", new_general_question_path, class:"btn btn-outline-light"%>
     </div>
