@@ -69,11 +69,11 @@
   }
 
 .btn-xx {
-  color: black;
+  color: rgb(255, 254, 254);
   background-color: #01b6c9;
   border-color: black;
 }
 
-.btnxx:hover {
-  color: opacify($color: #95cfc1, $amount: 0.9)
+.btn-xx:hover {
+  background-color: opacify($color: #95cfc1, $amount: 0.9)
 }
