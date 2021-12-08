@@ -2,13 +2,11 @@
   justify-content: space-between;
   background-color: #ffffff;
 
-
-
   h2 {
     font-style: 'initial';
     font-weight: bold;
-
-    font-family: monospace, serif;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 3px;
     font-size: 60px;
     color: rgba($color: #01b6c9, $alpha: 1.0);
   }

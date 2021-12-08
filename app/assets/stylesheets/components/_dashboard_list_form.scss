@@ -6,11 +6,20 @@
   background-image: linear-gradient(to right, transparent, #F3F1F5, transparent);
 }
 
+.card-body000{
+  border-radius: 8px;
+
+}
+
+.test{
+  border-radius: 8px;
+
+}
 
 
 
 .texting {
-  font-size: 20px;
+  font-size: 21px;
   text-align: center;
   color: black;
 }
@@ -25,7 +34,6 @@
   color: white;
   font-size: 16px;
   cursor: pointer;
-  width: 78px;
   align-self: center;
   padding: 7px;
   margin-bottom: 20px;
@@ -97,18 +105,9 @@
   }
 }
 
-.cardxx {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  text-align: center;
-  background-color: #01b6c9;
-  color: white;
-}
 
-.fa {
-  font-size:50px;
-}
 
-.cardxx h4, p {
-  color: white;
+
+.cardxx h4{
+  color: rgb(3, 3, 3);
 }
